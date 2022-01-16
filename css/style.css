@@ -74,7 +74,7 @@ body {
 .hero-logo {
   top: 0;
   left: 0;
-  background-image: url(/images/NBLOGOseul.png);
+  background-image: url(/images/);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -84,6 +84,8 @@ body {
 .hero-contact {
   top: 0;
   right: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .hero-socials {
