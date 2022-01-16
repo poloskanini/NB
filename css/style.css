@@ -14,7 +14,7 @@ html {
 body {
   background-color: white;
   font-family: 'Microsoft Yi Baiti';
-  font-size: 17px;
+  font-size: 18px;
   overscroll-behavior: none;
   color: black;
 }
@@ -71,7 +71,7 @@ body {
   color: black;
 }
 
-.hero-mini {
+.hero-logo {
   top: 0;
   left: 0;
   background-image: url(/images/NBLOGOseul.png);
@@ -98,7 +98,6 @@ body {
 
 .hero-job p {
   text-transform: uppercase;
-  padding: 5% 0;
 }
 
 .hero-job p:first-child {
@@ -132,6 +131,8 @@ section a {
   grid-gap: 20px;
   -ms-grid-columns: (300px)[auto-fill];
       grid-template-columns: repeat(auto-fill, 300px);
+  -ms-grid-rows: (300px)[auto-fill];
+      grid-template-rows: repeat(auto-fill, 300px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
