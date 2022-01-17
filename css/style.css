@@ -7,6 +7,11 @@
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Microsoft Yi Baiti";
+  src: url("../fonts/msyi/msyi.ttf") format("truetype");
+}
+
 html {
   font-family: 'Microsoft Yi Baiti';
 }
