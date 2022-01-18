@@ -185,19 +185,29 @@ section a {
 
 .project-card:nth-child(2) {
   background-image: url(https://poloskanini.github.io/SNGAF-maquette/content/94414604_m_darker.jpg);
-  background-position: center;
+  background-position: right;
 }
 
 .project-card:nth-child(3) {
-  background-image: url(/images/redhairposter.jpg);
-  background-position: left;
+  background-image: url(../images/redhairposter.jpg);
+  background-position: 25% 75%;
 }
 
 .project-card:nth-child(4) {
-  background-image: url(/images/rudorposter.jpg);
+  background-image: url(../images/rudorposter.jpg);
 }
 
 .project-card:nth-child(5) {
   background-image: url(/images/jesuisangeposter.jpg);
+}
+
+.project-card:nth-child(6) {
+  background-image: url(../images/newyorkposter.jpg);
+}
+
+@media screen and (max-width: 600px) {
+  .project-card {
+    height: 200px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
