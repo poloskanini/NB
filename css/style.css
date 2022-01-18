@@ -169,7 +169,6 @@ section a {
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   opacity: 1;
   -webkit-transition: .5s opacity ease-in-out;
   transition: .5s opacity ease-in-out;
@@ -177,5 +176,28 @@ section a {
 
 .project-card:hover {
   opacity: .7;
+}
+
+.project-card:nth-child(1) {
+  background-image: url(https://poloskanini.github.io/Dicee3D/images/backgroundDice.jpg);
+  background-position: right;
+}
+
+.project-card:nth-child(2) {
+  background-image: url(https://poloskanini.github.io/SNGAF-maquette/content/94414604_m_darker.jpg);
+  background-position: center;
+}
+
+.project-card:nth-child(3) {
+  background-image: url(/images/redhairposter.jpg);
+  background-position: left;
+}
+
+.project-card:nth-child(4) {
+  background-image: url(/images/rudorposter.jpg);
+}
+
+.project-card:nth-child(5) {
+  background-image: url(/images/jesuisangeposter.jpg);
 }
 /*# sourceMappingURL=style.css.map */
