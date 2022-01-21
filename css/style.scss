@@ -131,7 +131,6 @@ section {
   font-size: 10rem;
 }
 
-
 // Card Opacity
 .custom-p {
   opacity: 0;
@@ -185,10 +184,26 @@ section {
   background-image: url(../images/newyorkposter.jpg);
 }
 
-// NON SATISFAISANT
-// Revoir toute la grid pour le mobile (peut être mettre la section2 en display:flex ?
+// MEDIA QUERIES MOBILE
 @media screen and (max-width: 600px) {
+  header {
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(255, 255, 255, .9);
+    position: fixed;
+  }
+  
+  .header-up {
+    top: 0;
+  }
+  
+  .header-down {
+    bottom: 0;
+  }
+
   .project-card {
     height: 200px;
   }
+
+  
 }
