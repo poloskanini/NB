@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 *,
 *::before,
 *::after {
@@ -26,6 +27,39 @@ body {
 
 .container {
   overflow: hidden;
+  position: relative;
+}
+
+.ghostbox {
+  width: 100%;
+  height: 500px;
+  background-color: lightblue;
+  margin-bottom: 14rem;
+}
+
+[class*="fade-"] {
+  opacity: 0;
+}
+
+.fade-visible {
+  opacity: 1;
+  -webkit-transition: 2.6s cubic-bezier(0.5, 0, 0, 1);
+  transition: 2.6s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.fade-1 {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.fade-2 {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.fade-3 {
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
 }
 
 .hero {
@@ -50,20 +84,17 @@ body {
 }
 
 header {
-  z-index: 10;
+  z-index: 10000;
 }
 
 .hero-item {
   position: fixed;
-  width: 200px;
+  width: 300px;
   height: 100px;
   padding: 0 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -139,10 +170,6 @@ header {
   font-weight: 900;
 }
 
-section {
-  padding: 10em;
-}
-
 section h1 {
   font-size: 3em;
 }
@@ -156,28 +183,23 @@ section a {
   font-weight: bold;
 }
 
-.section2 {
+.section1 {
   max-width: 1800px;
   width: 100%;
   height: auto;
-  color: white;
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-  -ms-grid-columns: (300px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 300px);
-  -ms-grid-rows: (300px)[auto-fill];
-      grid-template-rows: repeat(auto-fill, 300px);
+  -ms-grid-columns: (400px)[3];
+      grid-template-columns: repeat(3, 400px);
+  -ms-grid-rows: (300px)[2];
+      grid-template-rows: repeat(2, 300px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
-}
-
-.work {
-  left: 55%;
-  top: 60%;
-  font-size: 10rem;
+  margin-top: 5rem;
+  position: relative;
 }
 
 .custom-p {
@@ -192,7 +214,7 @@ section a {
 
 /* Project Card */
 .project-card {
-  width: 300px;
+  width: 400px;
   height: 600px;
   background-color: black;
   background-size: cover;
@@ -204,37 +226,59 @@ section a {
   opacity: .9;
 }
 
+.section1 {
+  max-width: 1800px;
+  width: 80%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (300px)[3];
+      grid-template-columns: repeat(3, 300px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 40px;
+}
+
+.project-card {
+  width: 300px;
+  height: 600px;
+  z-index: 100;
+}
+
 .project-card:hover {
   -webkit-filter: grayscale(90%) contrast(100%);
           filter: grayscale(90%) contrast(100%);
 }
 
 .project-card:nth-child(1) {
-  background-image: url(https://poloskanini.github.io/Dicee3D/images/backgroundDice.jpg);
-  background-position: center;
-}
-
-.project-card:nth-child(2) {
   background-image: url(https://poloskanini.github.io/SNGAF-maquette/content/94414604_m_darker.jpg);
   background-position: right;
 }
 
-.project-card:nth-child(3) {
+.project-card:nth-child(2) {
   background-image: url(../images/redhairposter2.jpg);
   background-position: 25% 75%;
 }
 
-.project-card:nth-child(4) {
-  background-image: url(../images/rudorposter.jpg);
+.project-card:nth-child(3) {
+  background-image: url(https://poloskanini.github.io/Dicee3D/images/backgroundDice.jpg);
+  background-position: center;
 }
 
 .project-card:nth-child(5) {
-  background-image: url(/images/jesuisangeposter.jpg);
-  background-position: center;
+  background-image: url(../images/jesuisangeposter.jpg);
+  opacity: 1;
 }
 
 .project-card:nth-child(6) {
   background-image: url(../images/newyorkposter.jpg);
+  opacity: 1;
+}
+
+.project-card:nth-child(7) {
+  background-image: url(../images/rudorposter.jpg);
+  opacity: 1;
 }
 
 .project-card .overlay {
@@ -319,11 +363,31 @@ section a {
   transform: translate3d(0, 0, 0);
 }
 
+.section-0 {
+  font-family: 'Cormorant Garamond';
+  text-align: center;
+  top: 100%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed;
+  margin-top: 10rem;
+  cursor: default;
+}
+
+.section-0 p {
+  font-size: clamp(25px, 5vw, 75px);
+}
+
+.section-0 .quote {
+  font-size: 3vw;
+}
+
 @media screen and (max-width: 600px) {
   header {
     width: 100%;
     height: 10vh;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: white;
     position: fixed;
   }
   .header-up {
@@ -332,12 +396,23 @@ section a {
   .header-down {
     bottom: 0;
   }
+  .hero-item {
+    width: 200px;
+  }
   .project-card {
     height: 200px;
   }
-  .section2 {
+  .section1 {
     -ms-grid-rows: (1fr)[7];
         grid-template-rows: repeat(7, 1fr);
+    -ms-grid-columns: inherit;
+        grid-template-columns: inherit;
+  }
+  .section-0 {
+    position: absolute;
+    top: -13%;
+    left: 30%;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

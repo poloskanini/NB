@@ -25,9 +25,12 @@
 </head>
 <body>
 
-  <div class="container" data-scroll-container data-scroll-speed="1" data-scroll-delay="2">
+  <!-- Container Locomotive -->
+  <div class="container fade-1" data-scroll-container data-scroll-speed="1">
 
+    <!-- HERO -->
     <div class="hero">
+      <!-- Header UP-->
       <header class="header-up">
         <div class="hero-item hero-logo"></div>
         <div class="hero-item hero-contact">
@@ -35,39 +38,34 @@
           </div>
       </header>
 
-      <header class="header-down">
+      <!-- Header DOWN -->
+      <header class="header-down fade-2">
         <div class="hero-item hero-job">
-          <p>Développeur Freelance</p>
+          <p>Freelance Developer</p>
           <p>Web Designer</p>
         </div>
-        <div class="hero-item hero-socials">
-          <a href="">FACEBOOK</a>
+        <div class="hero-item hero-socials fade-3">
+          <a href="https://www.facebook.com/nicolasbarthes.dev">FACEBOOK</a>
           <a href="">LINKEDIN</a>
         </div>
       </header>
         
     </div>
 
-    <section class="section2" data-scroll-section>
-        <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="4">
-          <a href="https://poloskanini.github.io/Dicee3D/" target="_blank" class="project-card-link">
-            <div class="overlay">
-              <h2>Jeu de dés <br> <small>(JavaScript Vanilla / CSS)</small></h2>
-              <p>DICE GAME</p>
-            </div>
-          </a>
-        </div>
-      
+    <!-- Section -->
+    <section class="section1" data-scroll-section>
 
+      <!-- Project 1 -->
       <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="5">
         <a href="https://poloskanini.github.io/SNGAF-maquette/" target="_blank" class="project-card-link">
           <div class="overlay">
-            <h2>Syndicat des Navigants du Groupe Air France <br> <small>(Tailwind / Saas / JS / Gsap)</small></h2>
+            <h2>Site du Syndicat des Navigants du Groupe Air France <br> <small>(Tailwind / Saas / JS / Gsap)</small></h2>
             <p>SNGAF</p>
           </div>
         </a>
       </div>
 
+      <!-- Project 2 -->
       <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="8" data-scroll-delay="">
         <a href="https://www.redhairlovers.fr/" target="_blank" class="project-card-link">
           <div class="overlay">
@@ -77,16 +75,33 @@
         </a>
       </div>
 
-      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="7" data-scroll-delay="1.5">
-        <a href="https://poloskanini.github.io/EVAL_STUDI_1/" target="_blank" class="project-card-link">
+      <!-- Project 3 -->
+      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="4">
+        <a href="https://poloskanini.github.io/Dicee3D/" target="_blank" class="project-card-link">
           <div class="overlay">
-            <h2>Site vitrine associatif <br> <small>(HTML / Bootstrap)</small></h2>
-            <p>ASSOCIATION DU RU D'OR</p>
+            <h2>Jeu de dés <br> <small>(JavaScript Vanilla / CSS)</small></h2>
+            <p>DICE GAME</p>
           </div>
         </a>
       </div>
 
-      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="7">
+      <!-- My Work -->
+      <div class="section-0 fade-" data-scroll data-scroll-speed="2">
+        <p 
+            data-scroll 
+            data-scroll-direction="horizontal" 
+            data-scroll-speed="-2"
+        >
+            Some of my projects...
+        </p>
+        
+        <p class="quote" data-scroll 
+        data-scroll-direction="horizontal" 
+        data-scroll-speed="2"><i>— let's discover them.</i></p>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="15">
         <a href="https://poloskanini.github.io/jesuisange/" target="_blank" class="project-card-link">
           <div class="overlay">
             <h2>Assistante administrative <br> <small>(HTML / Bootstrap / JS)</small></h2>
@@ -95,7 +110,8 @@
         </a>
       </div>
 
-      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="9" data-scroll-delay="1">
+      <!-- Project 5 -->
+      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="20" data-scroll-delay="1">
         <a href="https://poloskanini.github.io/New-York-Experience/" target="_blank" class="project-card-link">
           <div class="overlay">
             <h2>Modèle de page d'accueil vidéo <br> <small>(HTML / CSS)</small></h2>
@@ -104,29 +120,34 @@
         </a>
       </div>
 
-      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="12" >
-        <div class="overlay">
-          <p></p>
-        </div>
-      </div>
-
-      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="10" >
-        <div class="overlay">
-          <p></p>
-        </div>
+      <!-- Project 6 -->
+      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="17" data-scroll-delay="">
+        <a href="https://poloskanini.github.io/EVAL_STUDI_1/" target="_blank" class="project-card-link">
+          <div class="overlay">
+            <h2>Site vitrine associatif <br> <small>(HTML / Bootstrap)</small></h2>
+            <p>ASSOCIATION DU RU D'OR</p>
+          </div>
+        </a>
       </div>
 
     </section>
 
+    <div class="ghostbox fade-">
+      NEW SECTION
+    </div>
+
 </div>
 
-
+<!-- SPLIT TEXT -->
+<script src="splittext.min.js"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <!-- LOCOMOTIVE JS-->
 <script src="locomotive-scroll.min.js"></script>
-
 <!-- My JS -->
 <script type="module" src="index.js"></script>
 
   
 </body>
 </html>
+<!-- Vidéo background opacity de Kelly L provenant de Pexels -->

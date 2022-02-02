@@ -11,6 +11,8 @@
   src: url("../fonts/msyi/msyi.ttf") format("truetype")
  }
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
 html {
   font-family: 'Microsoft Yi Baiti';
 }
@@ -25,6 +27,36 @@ body {
 
 .container {
   overflow: hidden;
+  position: relative;
+}
+
+.ghostbox {
+  width: 100%;
+  height: 500px;
+  background-color: lightblue;
+  margin-bottom: 14rem;
+}
+
+// INTERSECTION OBSERVER
+[class*="fade-"] {
+  opacity: 0;
+}
+
+.fade-visible {
+  opacity: 1;
+  transition: 2.6s cubic-bezier(.5, .0, 0, 1);
+}
+
+.fade-1 {
+  transition-delay: 0s;
+}
+
+.fade-2 {
+  transition-delay: 1s;
+}
+
+.fade-3 {
+  transition-delay: 2s;
 }
 
 // HERO
@@ -44,16 +76,15 @@ body {
 }
 
 header {
-  z-index: 10;
+  z-index: 10000;
 }
 
 .hero-item {
   position: fixed;
-  width: 200px;
+  width: 300px;
   height: 100px;
   padding: 0 1em;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
@@ -125,7 +156,6 @@ header {
 
 // SECTION
 section {
-  padding: 10em;
 
   h1 {
     font-size: 3em;
@@ -140,23 +170,18 @@ section {
   }
 }
 
-.section2 {
+.section1 {
   max-width: 1800px;
   width: 100%;
   height: auto;
-  color: white;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, 300px);
-  grid-template-rows: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: repeat(2, 300px);
   justify-content: center;
   margin: auto;
-}
-
-.work {
-  left: 55%;
-  top: 60%;
-  font-size: 10rem;
+  margin-top: 5rem;
+  position: relative;
 }
 
 // Card Opacity
@@ -171,7 +196,7 @@ section {
 
 /* Project Card */
 .project-card {
-  width: 300px;
+  width: 400px;
   height: 600px;
   background-color: black;
   background-size: cover;
@@ -182,38 +207,62 @@ section {
   opacity: .9;
 }
 
+// NOUVEL ESSAI (lié à project-card essai)
+.section1 {
+  max-width: 1800px;
+  width: 80%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  grid-gap: 40px;
+}
+
+// PROJECT CARD ESSAI (lié à NOUVEL ESSAI)
+.project-card {
+  width: 300px;
+  height: 600px;
+  z-index: 100;
+}
+
 .project-card:hover {
   filter: grayscale(90%) contrast(100%);
 }
 
 .project-card:nth-child(1) {
-  background-image: url(https://poloskanini.github.io/Dicee3D/images/backgroundDice.jpg);
-  background-position: center;
-}
-
-.project-card:nth-child(2) {
   background-image: url(https://poloskanini.github.io/SNGAF-maquette/content/94414604_m_darker.jpg);
   background-position: right;
 }
 
-.project-card:nth-child(3) {
+.project-card:nth-child(2) {
   background-image: url(../images/redhairposter2.jpg);
   background-position: 25% 75%;
-
 }
 
-.project-card:nth-child(4) {
-  background-image: url(../images/rudorposter.jpg);
+.project-card:nth-child(3) {
+  background-image: url(https://poloskanini.github.io/Dicee3D/images/backgroundDice.jpg);
+  background-position: center;
 }
 
 .project-card:nth-child(5) {
-  background-image: url(/images/jesuisangeposter.jpg);
-  background-position: center;
+  background-image: url(../images/jesuisangeposter.jpg);
+  opacity: 1;
+
 }
 
 .project-card:nth-child(6) {
   background-image: url(../images/newyorkposter.jpg);
+  opacity: 1;
+
 }
+
+.project-card:nth-child(7) {
+  background-image: url(../images/rudorposter.jpg);
+  opacity: 1;
+}
+
+
+
 
 //OVERLAY PROJECT-CARD
 .project-card .overlay {
@@ -287,12 +336,32 @@ section {
   transform: translate3d(0,0,0);
 }
 
+// MY WORK
+.section-0 {
+  font-family: 'Cormorant Garamond';
+  text-align: center;
+  top: 100%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  margin-top: 10rem;
+  cursor: default;
+
+  p {
+    font-size: clamp(25px, 5vw, 75px);
+  }
+
+  .quote {
+    font-size: 3vw;
+  }
+}
+
 // MEDIA QUERIES MOBILE
 @media screen and (max-width: 600px) {
   header {
     width: 100%;
     height: 10vh;
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, 1);
     position: fixed;
   }
   
@@ -304,11 +373,23 @@ section {
     bottom: 0;
   }
 
+  .hero-item {
+    width: 200px;
+  }
+
   .project-card {
     height: 200px;
   }
 
-  .section2 {
+  .section1 {
     grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: inherit;
+  }
+
+  .section-0 {
+    position: absolute;
+    top: -13%;
+    left: 30%;
+    width: 100%;
   }
 }
