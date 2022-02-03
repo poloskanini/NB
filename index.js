@@ -3,7 +3,7 @@ const scroll = new LocomotiveScroll({
   el: document.querySelector('[data-scroll-container]'),
   smooth: true,
   tablet: {smooth: true},
-  smartphone: {smoott: true},
+  smartphone: {smoott: true}
 });
 
 const target = document.querySelector('#js-target');
@@ -34,3 +34,4 @@ const observer = new IntersectionObserver(handleIntersect, options);
 document.querySelectorAll('[class*="fade-"]').forEach(function (r) {
   observer.observe(r);
 })
+
