@@ -13,16 +13,28 @@
   src: url("../fonts/msyi/msyi.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "LeJourScript";
+  src: url("../fonts/din-studio-le-jour/LeJourScript-Eaqpg.otf");
+}
+
+@font-face {
+  font-family: "LeJourSerif";
+  src: url("../fonts/din-studio-le-jour/LeJourSerif-OVZMo.otf");
+}
+
 html {
   font-family: 'Microsoft Yi Baiti';
+  height: 100%;
+  width: 100%;
 }
 
 body {
-  background-color: white;
   font-family: 'Microsoft Yi Baiti';
   font-size: 18px;
-  overscroll-behavior: none;
   color: black;
+  height: 100%;
+  width: 100%;
 }
 
 .container {
@@ -59,107 +71,69 @@ body {
   height: 100vh;
   width: 100%;
   position: relative;
-  background: white;
   background-image: url(../images/NBLOGOforweb.jpg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 10rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-header {
-  z-index: 10000;
-  background: #FFF;
-}
-
-.hero-item {
+.header-up,
+.header-down {
   position: fixed;
-  width: 200px;
-  height: 100px;
-  padding: 0 1em;
+  z-index: 10000;
+  width: 100%;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
+  font-size: 1rem;
+}
+
+.header-up {
+  top: 0;
+}
+
+.header-down {
+  bottom: 0;
+}
+
+.header-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
+  padding: 1.5rem;
 }
 
-.hero-item a {
+.header-item a {
   text-decoration: none;
   color: black;
 }
 
-@-webkit-keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: hue-rotate(-360deg);
-  }
+.header-logo img {
+  width: clamp(2rem, 3vw, 10rem);
+  height: clamp(2rem, 3vw, 10rem);
 }
 
-@keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: hue-rotate(-360deg);
-  }
-}
-
-.hero-logo {
-  top: 0;
-  left: 0;
-  background-image: url(../images/NBLOGOforweb.jpg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: none;
-}
-
-.hero-contact {
-  top: 0;
-  right: 0;
-}
-
-.hero-contact a {
-  padding: 2rem;
-}
-
-.hero-job {
+.header-job {
   cursor: default;
 }
 
-.hero-socials {
-  bottom: 0;
-  right: 0;
-}
-
-.hero-job {
-  bottom: 0;
-  left: 0;
-}
-
-.hero-job p {
+.header-job p {
   text-transform: uppercase;
 }
 
-.hero-job p:first-child {
+.header-job p:first-child {
   font-weight: 900;
 }
 
@@ -187,28 +161,25 @@ section a {
 }
 
 .section1 {
-  max-width: 1100px;
   width: 80%;
-  height: 90vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: auto;
-  grid-gap: 20px;
+  position: relative;
+  margin-bottom: 5rem;
 }
 
 /* Project Card */
 .project-card {
   width: 300px;
-  height: 600px;
+  height: 400px;
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
@@ -218,7 +189,8 @@ section a {
   cursor: pointer;
   opacity: .9;
   z-index: 100;
-  margin: 10% 0;
+  margin: 10% 50px;
+  gap: 200px;
 }
 
 .project-card:hover {
@@ -341,29 +313,18 @@ section a {
 .mywork {
   font-family: 'Cormorant Garamond';
   text-align: center;
-  top: 80%;
-  left: 30%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  position: fixed;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  top: 90%;
   width: 100%;
 }
 
 .mywork p {
   font-size: clamp(25px, 5vw, 75px);
-}
-
-.mywork .quote {
-  font-size: 3vw;
+  width: 100%;
 }
 
 .yourwork {
   height: 100vh;
+  width: 100%;
   position: relative;
 }
 
@@ -392,41 +353,12 @@ section a {
   font-size: clamp(40px, 5vw, 80px);
 }
 
-@media screen and (max-width: 1300px) {
-  header {
-    width: 100%;
-    background-color: white;
-    position: fixed;
-  }
-}
-
 @media screen and (max-width: 1000px) {
-  header {
-    width: 100%;
-    background-color: white;
-    position: fixed;
-  }
-  .header-up {
-    top: 0;
-    height: 8vh;
-  }
-  .header-down {
-    bottom: 0;
-    height: 15vh;
-  }
   .section1 {
-    -ms-grid-rows: (1fr)[7];
-        grid-template-rows: repeat(7, 1fr);
-    -ms-grid-columns: inherit;
-        grid-template-columns: inherit;
     height: auto;
   }
   .mywork {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    width: 100%;
-    display: none;
+    position: initial;
   }
 }
 /*# sourceMappingURL=style.css.map */

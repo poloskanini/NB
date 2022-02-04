@@ -27,33 +27,36 @@
 <body>
 
   <!-- Container Locomotive -->
-  <div class="container fade-2" data-scroll-container data-scroll-speed="1">
+  <div class="container fade-1" data-scroll-container>
 
-    <!-- HERO -->
-    <div class="hero">
-      <!-- Header UP-->
-      <header class="header-up">
-        <div class="hero-item hero-logo"></div>
-        <div class="hero-item hero-contact">
-          <a href="">CONTACT</a>
+    <!-- Header UP -->
+    <header class="header-up">
+        <div class="header-item header-logo">
+          <img src="images/NBLOGOforweb.jpg" alt="">
+        </div>
+        <div class="header-item header-contact">
+          <a href="mailto:nicolasbarthes.dev@gmail.com">CONTACT</a>
           </div>
       </header>
 
       <!-- Header DOWN -->
       <header class="header-down fade-2">
-        <div class="hero-item hero-job">
+        <div class="header-item header-job">
           <p>Freelance Developer</p>
           <p>Web Designer</p>
         </div>
-        <div class="hero-item hero-socials fade-3">
+        <div class="header-item header-socials fade-3">
           <a href="https://www.facebook.com/nicolasbarthes.dev">FACEBOOK</a>
           <a href="">LINKEDIN</a>
         </div>
       </header>
-        
-    </div>
+
+    <!-- HERO -->
+    <div class="hero"></div>
 
     <!-- Section -->
+
+
     <section class="section1" data-scroll-section>
 
       <!-- Project 1 -->
@@ -65,7 +68,7 @@
       </a>
 
       <!-- Project 2 -->
-      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="3" data-scroll-delay="">
+      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="5">
         <a href="https://www.redhairlovers.fr/" target="_blank" class="project-card-link">
           <div class="overlay">
             <h2>Site de rencontre imaginaire <br> <small>(HTML / CSS / JS)</small></h2>
@@ -85,22 +88,22 @@
       </div>
 
       <!-- My Work -->
-      <div class="mywork fade-1 c-lerp" data-scroll data-scroll-speed="1" data-scroll-target=".project-card">
+      <div class="mywork fade-">
         <p 
             data-scroll 
             data-scroll-direction="horizontal" 
-            data-scroll-speed="-1"
+            data-scroll-speed="1"
         >
             Here's some of my projects...
         </p>
         
         <p class="quote" data-scroll 
         data-scroll-direction="horizontal" 
-        data-scroll-speed="1"><i>— let's discover them.</i></p>
+        data-scroll-speed="-1"><i>— let's discover them.</i></p>
       </div>
 
       <!-- Project 4 -->
-      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="2">
+      <div class="project-card custom-p" data-scroll-class="scroll-class"  data-scroll data-scroll-speed="1">
         <a href="https://poloskanini.github.io/jesuisange/" target="_blank" class="project-card-link">
           <div class="overlay">
             <h2>Assistante administrative <br> <small>(HTML / Bootstrap / JS)</small></h2>
@@ -110,7 +113,7 @@
       </div>
 
       <!-- Project 5 -->
-      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="1" data-scroll-delay="1">
+      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="1">
         <a href="https://poloskanini.github.io/New-York-Experience/" target="_blank" class="project-card-link">
           <div class="overlay">
             <h2>Modèle de page d'accueil vidéo <br> <small>(HTML / CSS)</small></h2>
@@ -120,7 +123,7 @@
       </div>
 
       <!-- Project 6 -->
-      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll-repeat data-scroll data-scroll-speed="2">
+      <div class="project-card custom-p" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="2">
         <a href="https://poloskanini.github.io/EVAL_STUDI_1/" target="_blank" class="project-card-link">
           <div class="overlay">
             <h2>Site vitrine associatif <br> <small>(HTML / Bootstrap)</small></h2>
@@ -131,12 +134,12 @@
 
     </section>
 
-</div>
+  </div>
 
-<!-- Section 2-->
+    <!-- Section 2-->
 <section class="yourwork" data-scroll-section>
 
-  <div class="yourproject fade-1 c-lerp" data-scroll data-scroll-speed="1">
+  <div class="yourproject fade-1" data-scroll data-scroll-speed="1">
     <p
     data-scroll
     data-scroll-speed="-1"
@@ -153,6 +156,11 @@
   <video class="fade-" src="videos/inkblue.mp4" autoplay playsinline muted><video>
 
 </section>
+
+
+  
+
+
 
 <!-- SPLIT TEXT -->
 <script src="splittext.min.js"></script>

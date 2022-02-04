@@ -1,9 +1,8 @@
 // LOCOMOTIVE
+
 const scroll = new LocomotiveScroll({
   el: document.querySelector('[data-scroll-container]'),
   smooth: true,
-  tablet: {smooth: true},
-  smartphone: {smoott: true}
 });
 
 const target = document.querySelector('#js-target');
@@ -12,6 +11,8 @@ scroll.scrollTo(target);
 
 
 // INTERSECTION OBSERVER
+
+
 const ratio = .1;
 const options = {
   root: null,
@@ -24,7 +25,6 @@ const handleIntersect = function (entries, observer) {
     if (entry.intersectionRatio > ratio) {
       entry.target.classList.add('fade-visible')
       observer.unobserve(entry.target)
-    } else {
     }
   })
 }
@@ -34,4 +34,3 @@ const observer = new IntersectionObserver(handleIntersect, options);
 document.querySelectorAll('[class*="fade-"]').forEach(function (r) {
   observer.observe(r);
 })
-
