@@ -1,3 +1,4 @@
+// BASIC RESET
 *,
 *::before,
 *::after {
@@ -6,6 +7,7 @@
   box-sizing: border-box;
 }
 
+// FONTS
 @font-face {
   font-family: "Microsoft Yi Baiti";
   src: url("../fonts/msyi/msyi.ttf") format("truetype");
@@ -23,28 +25,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
-html {
-  font-family: 'Microsoft Yi Baiti';
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  font-family: 'Microsoft Yi Baiti';
-  font-size: 18px;
-  // overscroll-behavior: none;
-  color: black;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.container {
-  overflow: hidden;
-  position: relative;
-}
-
-// INTERSECTION OBSERVER
+// BASIC EFFECTS
+// Intersection Observer
 [class*="fade-"] {
   opacity: 0;
 }
@@ -66,15 +48,45 @@ body {
   transition-delay: 2s;
 }
 
-// HERO
-.hero {
+// Card Opacity
+.custom-p {
+  opacity: 0;
+  transition: opacity 5s;
+}
+
+.scroll-class {
+  opacity: 1;
+}
+
+// HTML - BODY
+html {
+  font-family: 'Microsoft Yi Baiti';
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Microsoft Yi Baiti';
+  font-size: 18px;
+  // overscroll-behavior: none;
+  color: black;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  overflow: hidden;
   position: relative;
-  background-image: url(../images/NBLOGOforweb.jpg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+}
+
+// HEADER
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .header-up,
@@ -126,6 +138,17 @@ body {
   }
 }
 
+// HERO
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: url(../images/NBLOGOforweb.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 // SECTION
 section {
 
@@ -140,16 +163,6 @@ section {
     color: white;
     font-weight: bold;
   }
-}
-
-// Card Opacity
-.custom-p {
-  opacity: 0;
-  transition: opacity 5s;
-}
-
-.scroll-class {
-  opacity: 1;
 }
 
 // Section1 MY WORK
@@ -295,6 +308,7 @@ section {
   text-align: center;
   top: 90%;
   width: 100%;
+  z-index: 1000;
 
   p {
     font-size: clamp(25px, 5vw, 75px);
@@ -306,6 +320,9 @@ section {
 .section2 {
   height: 100vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section2 video {
@@ -316,13 +333,11 @@ section {
 }
 
 .yourproject {
-  height: 100vh;
+  width: 100%;
   text-align: center;
-  position: absolute;
   z-index: 1000;
   font-family: 'Cormorant Garamond';
   color: #FFF;
-  left: 20%;
 
   p {
     font-size: clamp(40px, 5vw, 80px);
