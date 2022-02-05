@@ -34,3 +34,17 @@ const observer = new IntersectionObserver(handleIntersect, options);
 document.querySelectorAll('[class*="fade-"]').forEach(function (r) {
   observer.observe(r);
 })
+
+// Header change background
+const headerDown = document.querySelector('.header-down');
+
+window.addEventListener('scroll', () => {
+  if ( (window.scrollY > 20) && (window.matchMedia("(max-width: 1025px)").matches) ) {
+    headerDown.classList.add('header-white')
+  } else {
+    headerDown.classList.remove('header-white')
+
+  }
+})
+
+// Change Background color on body

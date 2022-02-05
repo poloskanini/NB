@@ -125,6 +125,8 @@ header {
 
 .header-down {
   bottom: 0;
+  -webkit-transition: 1s all ease-out;
+  transition: 1s all ease-out;
 }
 
 .header-item {
@@ -161,6 +163,19 @@ header {
   font-weight: 900;
 }
 
+.header-contact {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin-top: 3.5rem;
+  padding: 1rem;
+}
+
+.header-white {
+  background: #FFF;
+}
+
 .hero {
   height: 100vh;
   width: 100%;
@@ -188,6 +203,7 @@ section a {
   width: 100%;
   margin: auto;
   position: relative;
+  padding: 0 10%;
 }
 
 .myprojects {
@@ -204,9 +220,8 @@ section a {
 
 /* Project Card */
 .project-card {
-  width: 300px;
-  height: 400px;
-  background-color: black;
+  width: 350px;
+  height: 450px;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 1;
@@ -215,8 +230,9 @@ section a {
   cursor: pointer;
   opacity: .9;
   z-index: 100;
-  margin: 10% 50px;
-  gap: 200px;
+  margin: 7% 25px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
 }
 
 .project-card:hover {
@@ -224,7 +240,7 @@ section a {
           filter: grayscale(90%) contrast(100%);
 }
 
-.project-card:nth-child(1) {
+.project-card:nth-child(5) {
   background-image: url(https://poloskanini.github.io/SNGAF-maquette/content/94414604_m_darker.jpg);
   background-position: right;
 }
@@ -239,17 +255,18 @@ section a {
   background-position: center;
 }
 
-.project-card:nth-child(5) {
+.project-card:nth-child(1) {
   background-image: url(../images/jesuisangeposter.jpg);
   opacity: 1;
+  background-position: center;
 }
 
-.project-card:nth-child(6) {
+.project-card:nth-child(7) {
   background-image: url(../images/newyorkposter.jpg);
   opacity: 1;
 }
 
-.project-card:nth-child(7) {
+.project-card:nth-child(6) {
   background-image: url(../images/rudorposter.jpg);
   opacity: 1;
 }
@@ -349,10 +366,16 @@ section a {
   width: 100%;
 }
 
+.mywork .quote {
+  font-size: clamp(15px, 4vw, 50px);
+}
+
 .section2 {
   height: 100vh;
   width: 100%;
   position: relative;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 255, 255, 0));
 }
 
 .section2 video {
@@ -379,11 +402,12 @@ section a {
 }
 
 @media screen and (max-width: 1000px) {
+  .project-card {
+    width: 300px;
+    height: 250px;
+  }
   .section1 {
     height: auto;
-  }
-  .mywork {
-    position: initial;
   }
 }
 /*# sourceMappingURL=style.css.map */
