@@ -45,6 +45,5 @@ window.addEventListener('scroll', () => {
     headerDown.classList.remove('header-white')
 
   }
-})
 
-// Change Background color on body
+})
