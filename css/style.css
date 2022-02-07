@@ -93,6 +93,19 @@ html.has-scroll-dragging * {
   overflow: hidden;
 }
 
+.loader {
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.fondu-out {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+}
+
 header {
   position: absolute;
   top: 0;
@@ -368,6 +381,28 @@ section a {
 
 .mywork .quote {
   font-size: clamp(15px, 4vw, 50px);
+}
+
+.custom-shape-divider-top-1644230293 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+  opacity: .5;
+}
+
+.custom-shape-divider-top-1644230293 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 102px;
+}
+
+.custom-shape-divider-top-1644230293 .shape-fill {
+  fill: #FFFFFF;
 }
 
 .section2 {

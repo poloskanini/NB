@@ -58,7 +58,7 @@
   opacity: 1;
 }
 
-// HTML - BODY
+// HTML - BODY SETTINGS
 html {
   font-family: 'Microsoft Yi Baiti';
   height: 100%;
@@ -78,6 +78,7 @@ html.has-scroll-smooth {
   overflow: hidden;
 }
 
+//For Locomotive better behaviour
 html.has-scroll-dragging,
 html.has-scroll-dragging * {
   -webkit-user-select: none;
@@ -93,6 +94,19 @@ html.has-scroll-dragging * {
 .container {
   position: relative;
   overflow: hidden;
+}
+
+//LOADER
+.loader {
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.fondu-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
 }
 
 // HEADER
@@ -351,6 +365,29 @@ section {
   .quote {
     font-size: clamp(15px, 4vw, 50px);
   }
+}
+
+//SHAPE DIVIDER
+.custom-shape-divider-top-1644230293 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+  opacity: .5;
+}
+
+.custom-shape-divider-top-1644230293 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 102px;
+}
+
+.custom-shape-divider-top-1644230293 .shape-fill {
+  fill: #FFFFFF;
 }
 
 // SECTION 2 YOUR WORK

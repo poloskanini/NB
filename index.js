@@ -43,7 +43,19 @@ window.addEventListener('scroll', () => {
     headerDown.classList.add('header-white')
   } else {
     headerDown.classList.remove('header-white')
-
   }
+})
 
+//LOADER
+const loader = document.querySelector('.loader');
+
+window.addEventListener('load', () => {
+
+    if(sessionStorage.getItem('premierChargement') === null){
+        loader.classList.add('fondu-out');
+    } else {
+        loader.style.display = "none"; 
+    }
+  
+    sessionStorage.setItem('premierChargement', 'done');
 })

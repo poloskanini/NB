@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Description -->
-  <meta name ="description" content= "NB | Développeur Freelance et Web Designer, je vous accompagne dans la création sur mesure de votre site internet, de votre application mobile, ou n'importe quel projet numérique, visuel, vidéo etc..."/>
+  <meta name ="description" content= "Je vous accompagne dans la création sur mesure de votre site internet, de votre application mobile, ou n'importe quel projet numérique, visuel, vidéo etc..."/>
   <!-- Robots -->
   <meta name="robots" content="index, follow"/>
   <!-- Open Graph data -->
@@ -14,7 +14,7 @@
   <meta property="og:url" content="http://www.nicolasbarthes.com/" />
   <meta property="og:locale" content="fr_FR">
   <meta property="og:image" content="images/NBLOGOforweb.jpg" />
-  <meta property="og:description" content="NB | Développeur Freelance et Web Designer, je vous accompagne dans la création sur mesure de votre site internet, de votre application mobile, ou n'importe quel projet numérique, visuel, vidéo etc..."/>
+  <meta property="og:description" content="Je vous accompagne dans la création sur mesure de votre site internet, de votre application mobile, ou n'importe quel projet numérique, visuel, vidéo etc..."/>
   <!-- TITLE -->
   <title>Nicolas BARTHES - Développeur Freelance | Web Designer</title>
   <!-- Favicon -->
@@ -24,6 +24,8 @@
 </head>
 
 <body>
+  <!-- Loader -->
+  <div class="loader"></div>
 
   <!-- Container Locomotive -->
   <div class="container fade-1" data-scroll-container>
@@ -54,12 +56,9 @@
 
 
     <!-- HERO -->
-
     <div class="hero" data-scroll-section></div>
 
     <!-- Section -->
-
-
     <section class="section1" data-scroll-section>
 
       <div class="myprojects fade-">
@@ -74,80 +73,85 @@
           </a>
         </div>
 
-    <!-- Project 2 -->
-    <div class="project-card custom-p" id="project-card-2" data-scroll-class="scroll-class" data-scroll data-scroll-speed="1">
-      <a href="https://www.redhairlovers.fr/" target="_blank" class="project-card-link">
-        <div class="overlay">
-          <h2>Site de rencontre imaginaire <br> <small>(HTML / CSS / JS)</small></h2>
-          <p>RED HAIR LOVERS</p>
+        <!-- Project 2 -->
+        <div class="project-card custom-p" id="project-card-2"    data-scroll-class="scroll-class" data-scroll data-scroll-speed="1">
+          <a href="https://www.redhairlovers.fr/" target="_blank"     class="project-card-link">
+            <div class="overlay">
+              <h2>Site de rencontre imaginaire <br> <small>(HTML / CSS / JS)    </small></h2>
+              <p>RED HAIR LOVERS</p>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
 
-    <!-- Project 3 -->
-    <div class="project-card custom-p" id="project-card-3" data-scroll-class="scroll-class" data-scroll data-scroll-speed="3" data-scroll-delay="1">
-      <a href="https://poloskanini.github.io/Dicee3D/" target="_blank" class="project-card-link">
-        <div class="overlay">
-          <h2>Jeu de dés <br> <small>(JavaScript Vanilla / CSS)</small></h2>
-          <p>DICE GAME</p>
+        <!-- Project 3 -->
+        <div class="project-card custom-p" id="project-card-3" data-scroll-class="scroll-class" data-scroll data-scroll-speed="3" data-scroll-delay="1">
+          <a href="https://poloskanini.github.io/Dicee3D/" target="_blank" class="project-card-link">
+            <div class="overlay">
+              <h2>Jeu de dés <br> <small>(JavaScript Vanilla / CSS)</small></h2>
+              <p>DICE GAME</p>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
 
-    <!-- My Work -->
-    <div class="mywork fade-">
-      <p 
+        <!-- My Work -->
+        <div class="mywork fade-">
+          <p 
+          id="mywork-first"
           data-scroll 
           data-scroll-direction="horizontal" 
           data-scroll-speed="1"
-      >
+          >
           Quelques uns de mes projets...
-      </p>
+          </p>
       
-      <p class="quote" data-scroll 
-      data-scroll-direction="horizontal" 
-      data-scroll-speed="-1"><i>— découvrez les.</i></p>
-      
-    </div>
-
-    <!-- Project 4 -->
-    <a class="project-card custom-p" id="project-card-4" data-scroll-class="scroll-class" data-scroll data-scroll-repeat data-scroll data-scroll-speed="3" href="https://poloskanini.github.io/SNGAF-maquette/" target="_blank" class="project-card-link">
-      <div class="overlay">
-        <h2>Site du Syndicat des Navigants du Groupe Air France <br> <small>(Tailwind / Saas / JS / Gsap)</small></h2>
-        <p>SNGAF</p>
-      </div>
-    </a>
-
-    <!-- Project 5 -->
-    <div class="project-card custom-p" id="project-card-5" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="6">
-      <a href="https://poloskanini.github.io/EVAL_STUDI_1/" target="_blank" class="project-card-link">
-        <div class="overlay">
-          <h2>Site vitrine associatif <br> <small>(HTML / Bootstrap)</small></h2>
-          <p>ASSOCIATION DU RU D'OR</p>
+          <p id="mywork-second" class="quote" data-scroll 
+          data-scroll-direction="horizontal" 
+          data-scroll-speed="-1"><i>— découvrez les.</i>
+          </p>
         </div>
-      </a>
-    </div>
 
-    <!-- Project 6 -->
-    <div class="project-card custom-p" id="project-card-6" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="4">
-      <a href="https://poloskanini.github.io/New-York-Experience/" target="_blank" class="project-card-link">
-        <div class="overlay">
-          <h2>Modèle de page d'accueil vidéo <br> <small>(HTML / CSS)</small></h2>
-          <p>NEW-YORK EXPERIENCE</p>
+        <!-- Project 4 -->
+        <a class="project-card custom-p" id="project-card-4" data-scroll-class="scroll-class" data-scroll data-scroll-repeat data-scroll data-scroll-speed="3" href="https://poloskanini.github.io/SNGAF-maquette/" target="_blank" class="project-card-link">
+          <div class="overlay">
+           <h2>Site du Syndicat des Navigants du Groupe Air France <br> <small>(Tailwind / Saas / JS / Gsap)</small></h2>
+            <p>SNGAF</p>
+          </div>
+        </a>
+
+        <!-- Project 5 -->
+        <div class="project-card custom-p" id="project-card-5" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="6">
+          <a href="https://poloskanini.github.io/EVAL_STUDI_1/" target="_blank" class="project-card-link">
+            <div class="overlay">
+              <h2>Site vitrine associatif <br> <small>(HTML / Bootstrap)</small></h2>
+              <p>ASSOCIATION DU RU D'OR</p>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
+
+        <!-- Project 6 -->
+        <div class="project-card custom-p" id="project-card-6" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="4">
+          <a href="https://poloskanini.github.io/New-York-Experience/" target="_blank" class="project-card-link">
+            <div class="overlay">
+              <h2>Modèle de page d'accueil vidéo <br> <small>(HTML / CSS)</small></h2>
+              <p>NEW-YORK EXPERIENCE</p>
+            </div>
+          </a>
+        </div>
 
       </div>
       
-
     </section>
-
-    <div class="shapedivider"></div>
-    
 
      <!-- Section 2-->
     <section class="section2" data-scroll-section>
+      <!-- Shape Divider -->
+      <div class="custom-shape-divider-top-1644230293">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
 
       <div class="yourproject fade-1" data-scroll data-scroll-speed="1">
         <p
@@ -169,13 +173,6 @@
 
   </div>
 
-   
-
-
-  
-
-
-
 <!-- SPLIT TEXT -->
 <script src="splittext.min.js"></script>
 <!-- GSAP -->
@@ -184,7 +181,6 @@
 <script src="locomotive-scroll.min.js"></script>
 <!-- My JS -->
 <script type="module" src="index.js"></script>
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-219505589-1">
 </script>
@@ -196,7 +192,8 @@
   gtag('config', 'UA-219505589-1');
 </script>
 
-  
 </body>
 </html>
-<!-- Vidéo background opacity de Kelly L provenant de Pexels -->
+
+<!-- CREDITS :
+  Vidéo background "Quel est votre projet ?" de Kelly L provenant de Pexels -->
