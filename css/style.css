@@ -233,14 +233,13 @@ section a {
 
 /* Project Card */
 .project-card {
-  width: 350px;
+  width: 400px;
   height: 450px;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 1;
   -webkit-transition: .5s opacity ease-in-out;
   transition: .5s opacity ease-in-out;
-  cursor: pointer;
   opacity: .9;
   z-index: 100;
   margin: 7% 25px;
@@ -253,35 +252,47 @@ section a {
           filter: grayscale(90%) contrast(100%);
 }
 
-.project-card:nth-child(5) {
-  background-image: url(https://poloskanini.github.io/SNGAF-maquette/content/94414604_m_darker.jpg);
-  background-position: right;
-}
-
-.project-card:nth-child(2) {
-  background-image: url(../images/redhairposter2.jpg);
-  background-position: 25% 75%;
-}
-
-.project-card:nth-child(3) {
-  background-image: url(https://poloskanini.github.io/Dicee3D/images/backgroundDice.jpg);
-  background-position: center;
-}
-
-.project-card:nth-child(1) {
+#project-card-1 {
   background-image: url(../images/jesuisangeposter.jpg);
   opacity: 1;
   background-position: center;
 }
 
-.project-card:nth-child(7) {
+#project-card-2 {
+  background-image: url(../images/redhairposter2.jpg);
+  background-position: 25% 75%;
+}
+
+#project-card-3 {
+  background-image: url(https://poloskanini.github.io/Dicee3D/images/backgroundDice.jpg);
+  background-position: center;
+}
+
+#project-card-4 {
+  background-image: url(https://poloskanini.github.io/SNGAF-maquette/content/94414604_m_darker.jpg);
+  background-position: right;
+}
+
+#project-card-5 {
+  background-image: url(../images/rudorposter.jpg);
+  opacity: 1;
+}
+
+#project-card-6 {
   background-image: url(../images/newyorkposter.jpg);
   opacity: 1;
 }
 
-.project-card:nth-child(6) {
-  background-image: url(../images/rudorposter.jpg);
+#project-card-7 {
+  background-image: url(../images/kaamelottposter.jpg);
   opacity: 1;
+  background-position: center;
+}
+
+#project-card-8 {
+  background-image: url(../images/acg-poker.jpg);
+  opacity: 1;
+  background-position: center;
 }
 
 .project-card .overlay {

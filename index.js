@@ -12,7 +12,6 @@ scroll.scrollTo(target);
 
 // INTERSECTION OBSERVER
 
-
 const ratio = .1;
 const options = {
   root: null,
