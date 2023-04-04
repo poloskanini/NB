@@ -228,7 +228,7 @@ section a {
 }
 
 #project-card-1::before {
-  content: url("../images/arrow_down.svg");
+  content: url(../images/arrow_down.svg);
   width: 200px;
   height: 200px;
   top: -11rem;
