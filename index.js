@@ -1,18 +1,9 @@
-// LOCOMOTIVE
-
-const scroll = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true,
-});
-
-const target = document.querySelector('#js-target');
-
-scroll.scrollTo(target);
 
 
 // INTERSECTION OBSERVER
 
 const ratio = .1;
+
 const options = {
   root: null,
   rootMargin: '0px',
@@ -22,15 +13,14 @@ const options = {
 const handleIntersect = function (entries, observer) {
   entries.forEach(function (entry) {
     if (entry.intersectionRatio > ratio) {
-      entry.target.classList.add('fade-visible')
+      entry.target.classList.add('reveal-visible');
       observer.unobserve(entry.target)
     }
   })
 }
 
-//Met en place le détecteur de la zone d'affichage sur l'objet observer et déclenche l'appel vers handleIntersect() (tout en incluant les options)
 const observer = new IntersectionObserver(handleIntersect, options);
-document.querySelectorAll('[class*="fade-"]').forEach(function (r) {
+document.querySelectorAll('.reveal').forEach(function (r) {
   observer.observe(r);
 })
 
@@ -58,3 +48,14 @@ window.addEventListener('load', () => {
   
     sessionStorage.setItem('premierChargement', 'done');
 })
+
+// LOCOMOTIVE
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true,
+});
+
+// const target = document.querySelector('#js-target');
+
+// scroll.scrollTo(target);a

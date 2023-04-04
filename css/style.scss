@@ -27,8 +27,17 @@
 
 // BASIC EFFECTS
 // Intersection Observer
-[class*="fade-"] {
-  opacity: 0;
+// [class*="fade-"] {
+//   opacity: 0;
+// }
+
+.reveal {
+  opacity: 0
+}
+
+.reveal-visible {
+  opacity: 1;
+  transition: 2.6s cubic-bezier(.5, .0, 0, 1);
 }
 
 .fade-visible {
@@ -106,7 +115,7 @@ html.has-scroll-dragging * {
 
 .fondu-out {
   opacity: 0;
-  transition: opacity 0.4s ease-out;
+  transition: opacity 4s ease-out;
 }
 
 // HEADER
@@ -181,7 +190,6 @@ header {
 
 // HEADER HOVER EFFECT
 
-
 // HERO
 .hero {
   height: 100vh;
@@ -215,6 +223,7 @@ section {
   margin: auto;
   position: relative;
   padding: 0 10%;
+  margin-top: 3rem;
 }
 
 .myprojects {
@@ -249,6 +258,20 @@ section {
   background-image: url(../images/jesuisangeposter.jpg);
   opacity: 1;
   background-position: center;
+}
+
+#project-card-1::before {
+  content: url('../images/arrow_down.svg');
+  width: 200px;
+  height: 200px;
+  top: -11rem;
+  position: absolute;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+#project-card-1:hover::before {
+  opacity: 1;
 }
 
 #project-card-2 {
@@ -325,7 +348,7 @@ section {
 
 .project-card h2 {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   background-color: transparent;
   color: #FFF;
   padding: 1em 0;
@@ -369,12 +392,12 @@ section {
   z-index: 1000;
 
   p {
-    font-size: clamp(25px, 5vw, 75px);
+    font-size: clamp(25px, 10vw, 75px);
     width: 100%;
   }
 
   .quote {
-    font-size: clamp(15px, 4vw, 50px);
+    font-size: clamp(15px, 6vw, 50px);
   }
 }
 
