@@ -213,7 +213,7 @@ header {
   transform-origin: left;
   transform: scaleX(0);
   transition: transform 1.8s ease-in-out;
-  transition-delay: 0.2s;
+  transition-delay: 0.5s;
 }
 .nav__container .item.visible {
   opacity: 1;
