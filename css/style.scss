@@ -215,7 +215,7 @@ header {
 
   h2 {
     font-family: 'Cormorant Garamond', sans-serif;
-    font-size: 5vw;
+    font-size: 6vw;
     font-weight: 500;
   }
 
@@ -239,6 +239,7 @@ header {
       transform-origin: left;
       transform: scaleX(0);
       transition: transform 1.8s ease-in-out;
+      transition-delay: .2s;
       // transition: transform 2.15s cubic-bezier(0, 0.72, 1, 1.02);;
     }
 
