@@ -22,7 +22,7 @@ document.querySelectorAll('.reveal').forEach(function (r) {
 })
 
 // INTERSECTION OBSERVER VISIBLE
-const ratioBis = .9;
+const ratioBis = .1;
 
 const optionsBis = {
   root: null,
