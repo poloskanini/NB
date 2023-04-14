@@ -27,7 +27,7 @@ const ratioBis = .1;
 const optionsBis = {
   root: null,
   // rootMargin: '-50px',
-  rootMargin: '-200px',
+  rootMargin: '0px',
   threshold: ratioBis
 }
 
