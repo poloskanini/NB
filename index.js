@@ -98,15 +98,14 @@ firstItem.addEventListener('click', () => {
 const headerDown = document.querySelector('.header-down');
 const hero = document.querySelector('.hero');
 
-const headerDownOptions = {};
+const headerDownOptions = {
+  rootMargin: "300px 0px 0px 0px"
+};
 
 const headerDownObserver = new IntersectionObserver(function(entries, headerDownObserver) {
   entries.forEach(entry => {
     if(entry.isIntersecting) {
       headerDown.classList.add('header-white')
-    } else {
-      headerDown.classList.remove('header-white')
-
     }
   })
 }, headerDownOptions);
