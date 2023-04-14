@@ -1,7 +1,4 @@
-
-
-// INTERSECTION OBSERVER
-
+// INTERSECTION OBSERVER REVEAL-VISIBLE
 const ratio = .1;
 
 const options = {
@@ -24,16 +21,43 @@ document.querySelectorAll('.reveal').forEach(function (r) {
   observer.observe(r);
 })
 
-// Header change background
-const headerDown = document.querySelector('.header-down');
+// INTERSECTION OBSERVER VISIBLE
+const ratioBis = .9;
 
-window.addEventListener('scroll', () => {
-  if ( (window.scrollY > 20) && (window.matchMedia("(max-width: 1025px)").matches) ) {
-    headerDown.classList.add('header-white')
-  } else {
-    headerDown.classList.remove('header-white')
-  }
+const optionsBis = {
+  root: null,
+  // rootMargin: '-50px',
+  rootMargin: '-40px',
+  threshold: ratioBis
+}
+
+const handleIntersectBis = function(entries, observer) {
+  entries.forEach(function(entry) {
+    if (entry.intersectionRatio > ratioBis) {
+      entry.target.classList.add('visible');
+      observerBis.unobserve(entry.target);
+    }
+  })
+}
+
+const observerBis = new IntersectionObserver(handleIntersectBis, optionsBis);
+document.querySelectorAll('.item').forEach(function(r) {
+  observerBis.observe(r);
 })
+
+// Header change background
+
+//TODO: To be fixed
+// const headerDown = document.querySelector('.header-down');
+
+// window.addEventListener('scroll', function(event) {
+//   if (window.scrollY > 20) {
+//     console.log('Coucou');
+//     headerDown.classList.add('header-white')
+//   } else {
+//     headerDown.classList.remove('header-white')
+//   }
+// });
 
 //LOADER
 const loader = document.querySelector('.loader');
@@ -56,6 +80,35 @@ const scroll = new LocomotiveScroll({
   smooth: true,
 });
 
-// const target = document.querySelector('#js-target');
+// SCROLL TO A SPECIFIC POINT
 
-// scroll.scrollTo(target);a
+const firstItem = document.getElementById('firstItem'); // My clicked link
+const projects__target = document.getElementById('projects__target'); // My target
+
+firstItem.addEventListener('click', () => {
+  scroll.scrollTo(projects__target, {
+    duration: "1000",
+    easing: [0.25, 0.0, 0.35, 1.0],
+
+  });
+})
+
+// HeaderDown Change Background (change whand projects__target appears on screen)
+
+const headerDown = document.querySelector('.header-down');
+const hero = document.querySelector('.hero');
+
+const headerDownOptions = {};
+
+const headerDownObserver = new IntersectionObserver(function(entries, headerDownObserver) {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      headerDown.classList.add('header-white')
+    } else {
+      headerDown.classList.remove('header-white')
+
+    }
+  })
+}, headerDownOptions);
+
+headerDownObserver.observe(projects__target);

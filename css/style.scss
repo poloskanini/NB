@@ -7,6 +7,8 @@
   box-sizing: border-box;
 }
 
+$red: #C92D1F;
+
 // FONTS
 @font-face {
   font-family: "Microsoft Yi Baiti";
@@ -25,11 +27,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
 // BASIC EFFECTS
 // Intersection Observer
-// [class*="fade-"] {
-//   opacity: 0;
-// }
+[class*="fade-"] {
+  opacity: 0;
+}
 
 .reveal {
   opacity: 0
@@ -37,12 +41,12 @@
 
 .reveal-visible {
   opacity: 1;
-  transition: 2.6s cubic-bezier(.5, .0, 0, 1);
+  transition: 3s cubic-bezier(.5, .0, 0, 1);
 }
 
 .fade-visible {
   opacity: 1;
-  transition: 2.6s cubic-bezier(.5, .0, 0, 1);
+  transition: 10s cubic-bezier(.5, .0, 0, 1);
 }
 
 .fade-1 {
@@ -145,7 +149,7 @@ header {
 
 .header-down {
   bottom: 0;
-  transition: 1s all ease-out;
+  transition: .4s all ease-out;
 }
 
 .header-item {
@@ -185,7 +189,7 @@ header {
 }
 
 .header-white {
-  background: #FFF;
+  background: white;
 }
 
 // HEADER HOVER EFFECT
@@ -199,6 +203,148 @@ header {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+// NAV CONTAINER
+.nav__container {
+  width: 100%;
+  margin: 0 auto;
+  list-style-type: none;
+  font-family: 'Crimson Text', serif;
+  font-family: 'Cormorant Garamond', sans-serif;
+  margin-top: 5rem;
+
+  h2 {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 5vw;
+    font-weight: 500;
+  }
+
+  .item {
+    position: relative;
+    width: 100%;
+    color: $red;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    overflow: hidden;
+
+    // Ajout de la bordure dynamique
+    &:before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      background: $red;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 1.8s ease-in-out;
+      // transition: transform 2.15s cubic-bezier(0, 0.72, 1, 1.02);;
+    }
+
+    &.visible {
+      &:before {
+        transform: scaleX(1);
+      }
+
+      opacity: 1;
+
+      .item__content {
+        transform: translateY(0);
+      }
+    }
+
+    &:hover {
+      .item__content {
+        color: white;
+      }
+      // Gestion de l'apparition de l'image
+      .item__background {
+        &:after {
+          transform: translateY(-100%);
+        }
+
+        background-size: 120%
+      }
+    }
+
+    .item__link {
+      text-decoration: none;
+    }
+
+    .item__background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      transition: background-size .5s ease-out;
+  
+
+      &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        transform: translateY(0);
+        background: white;
+        transition: transform .3s ease-out;
+      }
+    }
+
+    .item__content {
+      display: flex;
+      width: 100%;
+      padding: 0 3vw;
+      height: 13vw;
+      align-items: center;
+      transform: translateY(20%);
+      transition: transform ease-out 1s, color ease-in-out .3s;
+      color: $red;
+      cursor: pointer;
+
+      .item__number {
+        font-weight: 500;
+        text-decoration: underline;
+        margin-right: 2vw;
+        margin-top: 4vw;
+        font-size: 2vw;
+        align-self: flex-start;
+        text-underline-offset: 12px;
+      }
+
+      .item__metas {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        margin-top: 2.7vw;
+
+        span {
+          font-weight: 100;
+          font-size: 2vw;
+          text-transform: uppercase;
+          letter-spacing: .020vw;
+        }
+
+        strong {
+          font-size: 1.6vw;
+          font-weight: 100;
+          font-family: 'Crimson Text', serif;
+
+        }
+      }
+    }
+  }
 }
 
 // SECTION
@@ -222,8 +368,8 @@ section {
   width: 100%;
   margin: auto;
   position: relative;
-  padding: 0 10%;
-  margin-top: 3rem;
+  // padding: 0 10%;
+  margin: 0 auto
 }
 
 .myprojects {
@@ -231,6 +377,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+  margin-top: 7rem;
 }
 
 /* Project Card */
@@ -306,11 +453,12 @@ section {
 }
 
 #project-card-8 {
-  background-image: url(../images/SFG.png);
+  background-image: url(../images/SFG3.png);
   opacity: 1;
   background-position: center;
 }
 
+//TODO: Revoir l'overlay
 //OVERLAY PROJECT-CARD
 .project-card .overlay {
   position: absolute;
@@ -359,7 +507,7 @@ section {
 }
 
 .project-card p {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 800;
   text-shadow: 0px 0px 1px gray;
 }
