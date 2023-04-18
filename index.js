@@ -99,7 +99,7 @@ const headerDown = document.querySelector('.header-down');
 const hero = document.querySelector('.hero');
 
 const headerDownOptions = {
-  rootMargin: "300px 0px 0px 0px"
+  rootMargin: "0px 0px 0px 0px"
 };
 
 const headerDownObserver = new IntersectionObserver(function(entries, headerDownObserver) {

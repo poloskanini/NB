@@ -145,6 +145,19 @@ header {
   color: black;
 }
 
+.header-socials a {
+  font-size: 1.7rem;
+  margin: 0.3rem 0;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+.header-socials a:hover {
+  color: #3b5998;
+}
+.header-socials a:hover:hover:nth-child(2) {
+  color: #B4D45F;
+}
+
 .header-logo img {
   width: clamp(2rem, 3vw, 10rem);
   height: clamp(2rem, 3vw, 10rem);
@@ -167,7 +180,20 @@ header {
   margin-top: 3.5rem;
   padding: 1rem;
 }
+.header-contact a:hover {
+  animation: flash 0.3s alternate infinite;
+}
 
+@keyframes flash {
+  0% {
+    color: #fff900;
+    text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+  }
+  90% {
+    color: #484848;
+    text-shadow: none;
+  }
+}
 .header-white {
   background: white;
 }
@@ -213,13 +239,16 @@ header {
   transform-origin: left;
   transform: scaleX(0);
   transition: transform 1.8s ease-in-out;
-  transition-delay: 0.5s;
+  transition-delay: 0.9s;
 }
 .nav__container .item.visible {
   opacity: 1;
 }
 .nav__container .item.visible:before {
   transform: scaleX(1);
+}
+.nav__container .item.visible:before:nth-child(3) {
+  transition-delay: 9s;
 }
 .nav__container .item.visible .item__content {
   transform: translateY(0);
@@ -347,20 +376,6 @@ section a {
   background-image: url(../images/jesuisangeposter.jpg);
   opacity: 1;
   background-position: center;
-}
-
-#project-card-1::before {
-  content: url(../images/arrow_down.svg);
-  width: 200px;
-  height: 200px;
-  top: -11rem;
-  position: absolute;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-#project-card-1:hover::before {
-  opacity: 1;
 }
 
 #project-card-2 {
@@ -525,6 +540,10 @@ section a {
 }
 .yourproject p {
   font-size: clamp(40px, 5vw, 80px);
+}
+
+.competences {
+  height: 200vh;
 }
 
 @media screen and (max-width: 1000px) {

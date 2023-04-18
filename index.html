@@ -19,6 +19,8 @@
   <title>NB | Nicolas BARTHÈS - Développeur Freelance</title>
   <!-- Favicon -->
   <link rel="icon" href="favicon/favicon-32x32.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- My CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -34,7 +36,9 @@
     <header>
       <div class="header-up">
         <div class="header-item header-logo">
-          <img src="images/NB-minilogo.png" alt="Logo NB">
+          <a href="index.html">
+            <img src="images/NB-minilogo.png" alt="Logo NB">
+          </a>
         </div>
         <div class="header-item header-contact">
           <a href="mailto:nicolasbarthes.dev@gmail.com"  target="_blank">CONTACT</a>
@@ -47,8 +51,12 @@
           <small>DÉVELOPPEUR FREELANCE</small>
         </div>
         <div class="header-item header-socials">
-          <a href="https://www.facebook.com/nicolasbarthes.dev" target="_blank">FACEBOOK</a>
-          <a href="https://github.com/poloskanini" target="_blank">GITHUB</a>
+          <a href="https://www.facebook.com/nicolasbarthes.dev" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://github.com/poloskanini" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
       </div>
   
@@ -63,9 +71,9 @@
 
       <!-- NAV__CONTAINER -->
       <ul class="nav__container">
-          <li class="item" id="firstItem">
+          <li class="item" id="firstItem" data-scroll-class="scroll-class" data-scroll>
             <a class="item__link">
-              <div class="item__background" style="background-image: url('/images/1.png')"></div>
+              <div class="item__background" style="background-image: url('/images/1_5.png')"></div>
               <div class="item__content firstLink">
                 <span class="item__number">01</span>
                 <h2>Quelques projets</h2>
@@ -77,7 +85,7 @@
             </a>
           </li>
         <li class="item">
-          <div class="item__background" style="background-image: url('/images/2.png')"></div>
+          <div class="item__background" style="background-image: url('/images/2_3.png')"></div>
           <div class="item__content">
             <span class="item__number">02</span>
             <h2>Technologies</h2>
@@ -88,7 +96,7 @@
           </div>
         </li>
         <li class="item">
-          <div class="item__background" style="background-image: url('/images/3.png')"></div>
+          <div class="item__background" style="background-image: url('/images/3_2.png')"></div>
           <div class="item__content">
             <span class="item__number">03</span>
             <h2>About N|B</h2>
@@ -99,7 +107,7 @@
           </div>
         </li>
         <li class="item">
-          <div class="item__background" style="background-image: url('/images/4.png')"></div>
+          <div class="item__background" style="background-image: url('/images/4_2.png')"></div>
           <div class="item__content">
             <span class="item__number">04</span>
             <h2>Contact</h2>
@@ -222,7 +230,7 @@
           <p 
           id="mywork-first"
           data-scroll 
-          data-scroll-direction="horizontal" 
+          data-scroll-direction="vertical" 
           data-scroll-speed="1"
           >
           Mes Technologies
