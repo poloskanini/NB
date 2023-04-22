@@ -118,7 +118,6 @@ header {
   position: fixed;
   z-index: 10000;
   width: 100%;
-  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,9 +135,8 @@ header {
 
 .header-item {
   display: flex;
-  flex-direction: column;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 .header-item a {
   text-decoration: none;
@@ -165,6 +163,7 @@ header {
 
 .header-job {
   cursor: default;
+  flex-direction: column;
 }
 
 .header-job p {
@@ -177,7 +176,6 @@ header {
 .header-contact {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  margin-top: 3.5rem;
   padding: 1rem;
 }
 .header-contact a:hover {
@@ -332,7 +330,7 @@ section h1 {
   font-size: 3em;
 }
 section p {
-  font-size: 1.7em;
+  font-size: 1.3em;
 }
 section a {
   color: white;
@@ -617,6 +615,10 @@ section a {
 .grid .left-column .langage-item:nth-child(8) {
   background: rgb(231, 174, 226);
   background: radial-gradient(circle, rgb(231, 174, 226) 0%, rgb(152, 103, 193) 100%);
+}
+.grid .left-column .langage-item:nth-child(9) {
+  background: rgb(254, 101, 87);
+  background: radial-gradient(circle, rgb(254, 101, 87) 0%, rgb(251, 173, 63) 100%);
 }
 .grid .right-column img {
   width: 100%;

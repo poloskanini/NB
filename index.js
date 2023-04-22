@@ -77,6 +77,12 @@ window.addEventListener('load', () => {
 const scroll = new LocomotiveScroll({
   el: document.querySelector('[data-scroll-container]'),
   smooth: true,
+  mobile: { // For mobile devices
+    smooth: true
+},
+tablet: { // For tablet devices
+    smooth: true
+}
 });
 
 
