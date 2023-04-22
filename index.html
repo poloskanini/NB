@@ -30,14 +30,16 @@
   <div class="loader"></div>
 
   <!-- Container Locomotive -->
-  <div class="container fade-1 reveal" data-scroll-container>
+  <!-- TODO:: Introduction avec fondu au blanc ? Ajouter à container les classes "fade-1" et "reveal" -->
+  <div class="container" data-scroll-container>
 
     <!-- HEADER -->
     <header>
       <div class="header-up">
         <div class="header-item header-logo">
           <a href="index.html">
-            <img src="images/NB-minilogo.png" alt="Logo NB">
+            <!-- <img src="images/NB-minilogo.png" alt="Logo NB"> -->
+            <img src="images/nb_black.png" alt="Logo NB black" style="width: 30px; height: auto;">
           </a>
         </div>
         <div class="header-item header-contact">
@@ -84,7 +86,7 @@
               </div>
             </a>
           </li>
-        <li class="item">
+        <li class="item" id="secondItem" data-scroll-class="scroll-class" data-scroll>
           <div class="item__background" style="background-image: url('/images/2_3.png')"></div>
           <div class="item__content">
             <span class="item__number">02</span>
@@ -95,7 +97,7 @@
             </div>
           </div>
         </li>
-        <li class="item">
+        <li class="item" id="thirdItem" data-scroll-class="scroll-class" data-scroll>
           <div class="item__background" style="background-image: url('/images/3_2.png')"></div>
           <div class="item__content">
             <span class="item__number">03</span>
@@ -106,7 +108,7 @@
             </div>
           </div>
         </li>
-        <li class="item">
+        <li class="item" id="fourthItem" data-scroll-class="scroll-class" data-scroll>
           <div class="item__background" style="background-image: url('/images/4_2.png')"></div>
           <div class="item__content">
             <span class="item__number">04</span>
@@ -125,11 +127,12 @@
       <div class="myprojects fade- reveal">
 
         <!-- Project 1 -->
-        <a class="project-card custom-p fade-" href="https://poloskanini.github.io/jesuisange/" target="_blank" id="project-card-1" data-scroll-class="scroll-class" data-scroll data-scroll-speed="4">
+        <a class="project-card custom-p" href="https://poloskanini.github.io/Dicee3D/" target="_blank" id="project-card-3" data-scroll-class="scroll-class" data-scroll data-scroll-speed="3" data-scroll-delay="1">
           <div class="overlay">
-            <h2></h2>
-            <p>Je suis Ange</p>
+            <h2>Jeu de dés <br> <small>(JavaScript/CSS)</small></h2>
+            <p>Dice Game</p>
           </div>
+          </a>
         </a>
 
         <!-- Project 2 -->
@@ -141,24 +144,16 @@
         </a>
 
         <!-- Project 3 -->
-        <a class="project-card custom-p" href="https://poloskanini.github.io/Dicee3D/" target="_blank" id="project-card-3" data-scroll-class="scroll-class" data-scroll data-scroll-speed="3" data-scroll-delay="1">
+        <a class="project-card custom-p fade-" href="https://poloskanini.github.io/jesuisange/" target="_blank" id="project-card-1" data-scroll-class="scroll-class" data-scroll data-scroll-speed="4">
           <div class="overlay">
-            <h2>Jeu de dés <br> <small>(JavaScript/CSS)</small></h2>
-            <p>Dice Game</p>
+            <h2></h2>
+            <p>Je suis Ange</p>
           </div>
-          </a>
         </a>
 
         <!-- My Work -->
         <div class="mywork fade- reveal">
-          <p 
-          id="mywork-first"
-          data-scroll 
-          data-scroll-direction="horizontal" 
-          data-scroll-speed="1"
-          >
-          Quelques uns de mes projets...
-          </p>
+          <p id="mywork-first" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">Quelques uns de mes projets...</p>
       
           <p id="mywork-second" class="quote" data-scroll 
           data-scroll-direction="horizontal" 
@@ -208,78 +203,140 @@
           </a>
         </a>
 
-        <!-- Project 8 -->
-        <!-- <a class="project-card custom-p" href="https://poloskanini.github.io/ACG_Poker/" target="_blank" id="project-card-8" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="6">
-          <div class="overlay">
-            <h2>Site informatif pour navigants<br> <small>(HTML / CSS / JS)</small></h2>
-            <p>ACG POKER CARDS</p>
-          </div>
-          </a>
-        </a> -->
-
       </div>
       
     </section>
 
     <!-- Section "Mes compétences"-->
-    <section class="competences" data-scroll-section>
+    <section id="competences" data-scroll-section>
 
-
-        <!-- My Work -->
-        <div class="mywork fade- reveal">
-          <p 
-          id="mywork-first"
-          data-scroll 
-          data-scroll-direction="vertical" 
-          data-scroll-speed="1"
-          >
-          Mes Technologies
-          </p>
-      
-          <p id="mywork-second" class="quote" data-scroll 
-          data-scroll-direction="horizontal" 
-          data-scroll-speed="-1"><i>— languages et compétences</i>
-          </p>
-        </div>
-
-
-      
-    </section>
-
-     <!-- Section 2-->
-    <section class="section2" data-scroll-section>
-      <!-- Shape Divider -->
-      <div class="custom-shape-divider-top-1644230293">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-        </svg>
-    </div>
-
-      <div class="yourproject fade-1" data-scroll data-scroll-speed="1">
-        <p
-        data-scroll
-        data-scroll-speed="3"
-        >
-          ...site en construction
-        </p>
-        <p data-scroll
-        data-scroll-speed="3"
-        >
-
-        </p>
-        <p
-        data-scroll
-        data-scroll-speed="3"
-        >
-        </p>
-        
+      <div class="my-technologies mywork fade- reveal" id="technologies">
+          <p data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">Mes Technologies</p>
+          <p class="quote" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1"><i>— languages et compétences</i></p>
       </div>
 
-      <video class="fade-" src="videos/inkblue.mp4" autoplay playsinline muted><video>
+      <!-- GRID -->
+      <section id="gallery">
+        <div class="grid">
+
+          <div class="left-column">
+            <div class="langage-item">
+              <img src="/images/icon-html.png" alt="html" data-scroll data-scroll-speed="1">
+              <p data-scroll data-scroll-repeat>
+                <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">H</span>
+                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="2">T</span>
+                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="2">M</span>
+                <span data-scroll data-scroll-delay="0.075" data-scroll-speed="2">L</span>
+                <span data-scroll data-scroll-delay="0.065" data-scroll-speed="2"> </span>
+                <span data-scroll data-scroll-delay="0.055" data-scroll-speed="2">5</span>
+              </p>
+            </div>
+            <div class="langage-item">
+              <img src="/images/icon-scss.png" alt="html" data-scroll data-scroll-speed="1">
+              <p data-scroll data-scroll-repeat>
+                <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">S</span>
+                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="2">C</span>
+                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="2">S</span>
+                <span data-scroll data-scroll-delay="0.075" data-scroll-speed="2">S</span>
+              </p>
+            </div>
+            <div class="langage-item">
+              <img src="/images/icon-js.png" alt="html" data-scroll data-scroll-speed="1">
+              <p data-scroll data-scroll-repeat>
+                <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">J</span>
+                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="2">A</span>
+                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="2">V</span>
+                <span data-scroll data-scroll-delay="0.075" data-scroll-speed="2">A</span>
+                <span data-scroll data-scroll-delay="0.065" data-scroll-speed="2">S</span>
+                <span data-scroll data-scroll-delay="0.055" data-scroll-speed="2">C</span>
+                <span data-scroll data-scroll-delay="0.045" data-scroll-speed="2">R</span>
+                <span data-scroll data-scroll-delay="0.035" data-scroll-speed="2">I</span>
+                <span data-scroll data-scroll-delay="0.025" data-scroll-speed="2">P</span>
+                <span data-scroll data-scroll-delay="0.015" data-scroll-speed="2">T</span>
+              </p>
+            </div>
+            <div class="langage-item">
+              <img src="/images/icon-php.png" alt="html" data-scroll data-scroll-speed="1">
+              <p data-scroll data-scroll-repeat>
+                <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">P</span>
+                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="2">H</span>
+                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="2">P</span>
+              </p>
+            </div>
+            <div class="langage-item">
+              <img src="/images/icon-sql.png" alt="html" data-scroll data-scroll-speed="1">
+              <p data-scroll data-scroll-repeat>
+                <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">S</span>
+                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="2">Q</span>
+                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="2">L</span>
+              </p>
+            </div>
+            <div class="langage-item">
+              <img src="/images/icon-react.png" alt="html" data-scroll data-scroll-speed="1">
+              <p data-scroll data-scroll-repeat>
+                <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">R</span>
+                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="2">E</span>
+                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="2">A</span>
+                <span data-scroll data-scroll-delay="0.075" data-scroll-speed="2">C</span>
+                <span data-scroll data-scroll-delay="0.065" data-scroll-speed="2">T</span>
+                <span data-scroll data-scroll-delay="0.055" data-scroll-speed="2">.</span>
+                <span data-scroll data-scroll-delay="0.045" data-scroll-speed="2">J</span>
+                <span data-scroll data-scroll-delay="0.035" data-scroll-speed="2">S</span>
+              </p>
+            </div>
+            <div class="langage-item">
+              <img src="/images/icon-sf.png" alt="html" data-scroll data-scroll-speed="1">
+              <p data-scroll data-scroll-repeat>
+                <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">S</span>
+                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="2">Y</span>
+                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="2">M</span>
+                <span data-scroll data-scroll-delay="0.075" data-scroll-speed="2">F</span>
+                <span data-scroll data-scroll-delay="0.065" data-scroll-speed="2">O</span>
+                <span data-scroll data-scroll-delay="0.055" data-scroll-speed="2">N</span>
+                <span data-scroll data-scroll-delay="0.045" data-scroll-speed="2">Y</span>
+              </p>
+            </div>
+            <div class="langage-item">
+              <img src="/images/icon-wp.png" alt="html" data-scroll data-scroll-speed="1">
+              <p data-scroll data-scroll-repeat>
+                <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">W</span>
+                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="2">O</span>
+                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="2">R</span>
+                <span data-scroll data-scroll-delay="0.075" data-scroll-speed="2">D</span>
+                <span data-scroll data-scroll-delay="0.065" data-scroll-speed="2">P</span>
+                <span data-scroll data-scroll-delay="0.055" data-scroll-speed="2">R</span>
+                <span data-scroll data-scroll-delay="0.045" data-scroll-speed="2">E</span>
+                <span data-scroll data-scroll-delay="0.045" data-scroll-speed="2">S</span>
+                <span data-scroll data-scroll-delay="0.045" data-scroll-speed="2">S</span>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="right-column">
+            <img src="/images/essai6.png" alt=""
+            data-scroll=""
+            data-scroll-sticky
+            data-scroll-target="#gallery"
+            data-scroll-speed="1.2">
+          </div>
+        </div>
+      </section>
 
     </section>
+
+    <!-- SECTION ABOUT ME -->
+    <section id="about-me" data-scroll-section data-scroll-direction="horizontal">
+      <div class="mywork fade- reveal my-technologies">
+        <p data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">About N|B</p>
+        <p class="quote" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1"><i>— art is Heart</i></p>
+    </div>
+    </section>
+
+    <!-- SECTION CONTACT -->
+
+
+    <!-- SECTION FOOTER -->
 
   </div>
 
@@ -294,6 +351,8 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-219505589-1">
 </script>
+<!-- SWUP -->
+<script src="https://unpkg.com/swup@3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

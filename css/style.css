@@ -332,7 +332,7 @@ section h1 {
   font-size: 3em;
 }
 section p {
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 section a {
   color: white;
@@ -542,7 +542,91 @@ section a {
   font-size: clamp(40px, 5vw, 80px);
 }
 
-.competences {
+#competences {
+  font-family: "Cormorant Garamond";
+}
+
+.my-technologies {
+  margin: 3rem 0;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% auto;
+}
+.grid .left-column .langage-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  font-family: "Cormorant Garamond";
+  font-size: clamp(1rem, 2vw, 4vw);
+  font-weight: bold;
+  color: floralwhite;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+.grid .left-column .langage-item img {
+  z-index: 0;
+  width: clamp(100px, 8vw, 10vw);
+  opacity: 0.4;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.grid .left-column .langage-item p {
+  z-index: 1;
+}
+.grid .left-column .langage-item span {
+  display: inline-block;
+}
+.grid .left-column .langage-item:nth-child(1) {
+  background: rgb(48, 139, 186);
+  background: radial-gradient(circle, rgb(48, 139, 186) 0%, rgb(143, 207, 225) 100%);
+}
+.grid .left-column .langage-item:nth-child(2) {
+  background: rgb(207, 100, 155);
+  background: radial-gradient(circle, rgb(207, 100, 155) 0%, rgba(222, 104, 105, 0.8029805672) 100%);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.grid .left-column .langage-item:nth-child(3) {
+  background: rgb(247, 223, 28);
+  background: radial-gradient(circle, rgb(247, 223, 28) 0%, rgb(128, 118, 41) 100%);
+}
+.grid .left-column .langage-item:nth-child(4) {
+  background: rgb(162, 171, 226);
+  background: radial-gradient(circle, rgb(162, 171, 226) 0%, rgb(86, 93, 195) 100%);
+}
+.grid .left-column .langage-item:nth-child(5) {
+  background: rgb(51, 153, 218);
+  background: radial-gradient(circle, rgb(51, 153, 218) 0%, rgb(72, 108, 131) 100%);
+}
+.grid .left-column .langage-item:nth-child(6) {
+  background: rgb(0, 216, 255);
+  background: radial-gradient(circle, rgb(0, 216, 255) 0%, rgb(25, 125, 143) 100%);
+}
+.grid .left-column .langage-item:nth-child(7) {
+  background: rgb(36, 81, 93);
+  background: radial-gradient(circle, rgb(36, 81, 93) 0%, rgb(90, 122, 130) 100%);
+}
+.grid .left-column .langage-item:nth-child(8) {
+  background: rgb(231, 174, 226);
+  background: radial-gradient(circle, rgb(231, 174, 226) 0%, rgb(152, 103, 193) 100%);
+}
+.grid .right-column img {
+  width: 100%;
+  height: 96vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#about-me {
+  width: 100%;
   height: 200vh;
 }
 

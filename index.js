@@ -82,8 +82,15 @@ const scroll = new LocomotiveScroll({
 
 // SCROLL TO A SPECIFIC POINT
 
-const firstItem = document.getElementById('firstItem'); // My clicked link
-const projects__target = document.getElementById('projects__target'); // My target
+// My clicked links
+const firstItem = document.getElementById('firstItem');
+const secondItem = document.getElementById('secondItem');
+const thirdItem = document.getElementById('thirdItem');
+
+// My targets
+const projects__target = document.getElementById('projects__target'); // 
+const competences = document.getElementById('competences');
+const aboutMe = document.getElementById('about-me');
 
 firstItem.addEventListener('click', () => {
   scroll.scrollTo(projects__target, {
@@ -92,6 +99,23 @@ firstItem.addEventListener('click', () => {
 
   });
 })
+
+secondItem.addEventListener('click', () => {
+  scroll.scrollTo(competences, {
+    duration: "1000",
+    easing: [0.25, 0.0, 0.35, 1.0],
+
+  });
+})
+
+thirdItem.addEventListener('click', () => {
+  scroll.scrollTo(aboutMe, {
+    duration: "1000",
+    easing: [0.25, 0.0, 0.35, 1.0],
+
+  });
+})
+
 
 // HeaderDown Change Background (change whand projects__target appears on screen)
 
