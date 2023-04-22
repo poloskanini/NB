@@ -73,20 +73,14 @@ window.addEventListener('load', () => {
     sessionStorage.setItem('premierChargement', 'done');
 })
 
-// LOCOMOTIVE
-
+//& LOCOMOTIVE
 const scroll = new LocomotiveScroll({
   el: document.querySelector('[data-scroll-container]'),
   smooth: true,
-  smartphone: {
-        smooth: true
-    },
-    tablet: {
-        smooth: true
-    }
 });
 
-// SCROLL TO A SPECIFIC POINT
+
+// SCROLL TO A SPECIFIC POINT using LocomotiveScroll
 
 // My clicked links
 const firstItem = document.getElementById('firstItem');
