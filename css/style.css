@@ -627,7 +627,7 @@ section a {
 
 #about-me {
   width: 100%;
-  height: 200vh;
+  height: 100vh;
 }
 
 @media screen and (max-width: 1000px) {
