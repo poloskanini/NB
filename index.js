@@ -89,14 +89,23 @@ tablet: { // For tablet devices
 // SCROLL TO A SPECIFIC POINT using LocomotiveScroll
 
 // My clicked links
+const burgerMenu = document.getElementById('burgerMenu');
 const firstItem = document.getElementById('firstItem');
 const secondItem = document.getElementById('secondItem');
 const thirdItem = document.getElementById('thirdItem');
 
 // My targets
+const menu = document.getElementById('menu');
 const projects__target = document.getElementById('projects__target'); // 
 const competences = document.getElementById('competences');
 const aboutMe = document.getElementById('about-me');
+
+burgerMenu.addEventListener('click', () => {
+  scroll.scrollTo(menu, {
+    duration: "500",
+    easing: [0.25, 0.0, 0.35, 1.0],
+  });
+})
 
 firstItem.addEventListener('click', () => {
   scroll.scrollTo(projects__target, {
@@ -110,15 +119,13 @@ secondItem.addEventListener('click', () => {
   scroll.scrollTo(competences, {
     duration: "1000",
     easing: [0.25, 0.0, 0.35, 1.0],
-
   });
 })
 
 thirdItem.addEventListener('click', () => {
   scroll.scrollTo(aboutMe, {
-    duration: "1000",
+    duration: "500",
     easing: [0.25, 0.0, 0.35, 1.0],
-
   });
 })
 
@@ -140,4 +147,4 @@ const headerDownObserver = new IntersectionObserver(function(entries, headerDown
   })
 }, headerDownOptions);
 
-headerDownObserver.observe(projects__target);
+headerDownObserver.observe(menu);

@@ -31,19 +31,19 @@
 
   <!-- Container Locomotive -->
   <!-- TODO:: Introduction avec fondu au blanc ? Ajouter à container les classes "fade-1" et "reveal" -->
-  <div class="container" data-scroll-container>
+  <div class="container fade-1 reveal" data-scroll-container>
 
     <!-- HEADER -->
     <header>
       <div class="header-up">
         <div class="header-item header-logo">
-          <a href="index.html">
+          <a id="burgerMenu">
             <!-- <img src="images/NB-minilogo.png" alt="Logo NB"> -->
             <img src="images/nb_black.png" alt="Logo NB black" style="width: 30px; height: auto;">
           </a>
         </div>
         <div class="header-item header-contact">
-          <a href="mailto:nicolasbarthes.dev@gmail.com"  target="_blank">CONTACT</a>
+          <a href="mailto:nicolasbarthes.dev@gmail.com"  target="_blank"></a>
           </div>
         </div>
   
@@ -68,8 +68,10 @@
     <!-- HERO -->
     <div class="hero" data-scroll-section></div>
 
+    <div id="marginMenu"></div>
+
     <!-- Section -->
-    <section class="section1" data-scroll-section>
+    <section class="section1" id="menu" data-scroll-section>
 
       <!-- NAV__CONTAINER -->
       <ul class="nav__container">
@@ -127,7 +129,7 @@
       <div class="myprojects fade- reveal">
 
         <!-- Project 1 -->
-        <a class="project-card custom-p" href="https://poloskanini.github.io/Dicee3D/" target="_blank" id="project-card-3" data-scroll-class="scroll-class" data-scroll data-scroll-speed="3" data-scroll-delay="1">
+        <a class="project-card custom-p fade-1 reveal" href="https://poloskanini.github.io/Dicee3D/" target="_blank" id="project-card-3" data-scroll-class="scroll-class" data-scroll data-scroll-speed="3" data-scroll-delay="1">
           <div class="overlay">
             <h2>Jeu de dés <br> <small>(JavaScript/CSS)</small></h2>
             <p>Dice Game</p>
@@ -136,7 +138,7 @@
         </a>
 
         <!-- Project 2 -->
-        <a class="project-card custom-p" href="https://www.redhairlovers.fr/" target="_blank" id="project-card-2"    data-scroll-class="scroll-class" data-scroll data-scroll-speed="1">
+        <a class="project-card custom-p fade-2 reveal" href="https://www.redhairlovers.fr/" target="_blank" id="project-card-2"    data-scroll-class="scroll-class" data-scroll data-scroll-speed="1">
           <div class="overlay">
             <h2>Site imaginaire<br> <small>(HTML/CSS/JavaScript)</small></h2>
             <p>Red Hair Lovers</p>
@@ -144,7 +146,7 @@
         </a>
 
         <!-- Project 3 -->
-        <a class="project-card custom-p fade-" href="https://poloskanini.github.io/jesuisange/" target="_blank" id="project-card-1" data-scroll-class="scroll-class" data-scroll data-scroll-speed="4">
+        <a class="project-card custom-p fade-3 reveal" href="https://poloskanini.github.io/jesuisange/" target="_blank" id="project-card-1" data-scroll-class="scroll-class" data-scroll data-scroll-speed="4">
           <div class="overlay">
             <h2></h2>
             <p>Je suis Ange</p>
@@ -212,7 +214,7 @@
 
       <div class="my-technologies mywork fade- reveal" id="technologies">
           <p data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">Mes Technologies</p>
-          <p class="quote" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1"><i>— languages et compétences Web & Mobile</i></p>
+          <p class="quote" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1"><i>— langages et compétences Web & Mobile</i></p>
       </div>
 
       <!-- GRID -->
@@ -297,6 +299,16 @@
               </p>
             </div>
             <div class="langage-item">
+              <img src="/images/icon-swift.png" alt="html" data-scroll data-scroll-speed="1">
+              <p data-scroll data-scroll-repeat>
+                <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">S</span>
+                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="2">W</span>
+                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="2">I</span>
+                <span data-scroll data-scroll-delay="0.075" data-scroll-speed="2">F</span>
+                <span data-scroll data-scroll-delay="0.065" data-scroll-speed="2">T</span>
+              </p>
+            </div>
+            <div class="langage-item">
               <img src="/images/icon-wp.png" alt="html" data-scroll data-scroll-speed="1">
               <p data-scroll data-scroll-repeat>
                 <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">W</span>
@@ -310,20 +322,10 @@
                 <span data-scroll data-scroll-delay="0.045" data-scroll-speed="2">S</span>
               </p>
             </div>
-            <div class="langage-item">
-              <img src="/images/icon-swift.png" alt="html" data-scroll data-scroll-speed="1">
-              <p data-scroll data-scroll-repeat>
-                <span data-scroll data-scroll-delay="0.15" data-scroll-speed="2">S</span>
-                <span data-scroll data-scroll-delay="0.095" data-scroll-speed="2">W</span>
-                <span data-scroll data-scroll-delay="0.085" data-scroll-speed="2">I</span>
-                <span data-scroll data-scroll-delay="0.075" data-scroll-speed="2">F</span>
-                <span data-scroll data-scroll-delay="0.065" data-scroll-speed="2">T</span>
-              </p>
-            </div>
 
           </div>
 
-          <div class="right-column">
+          <div class="right-column bg">
             <img src="/images/essai6.png" alt=""
             data-scroll=""
             data-scroll-sticky
@@ -339,10 +341,13 @@
     <section id="about-me" data-scroll-section data-scroll-direction="horizontal">
 
       <div class="mywork fade- reveal my-technologies">
-        <p data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">About N|B</p>
-        <p class="quote" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1"><i>— art is Heart</i></p>
-
-    </div>
+        <p data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">
+          About N|B
+        </p>
+        <p class="quote" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1">
+          <i>— art is heart</i>
+        </p>
+      </div>
 
     </section>
 
