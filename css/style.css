@@ -203,6 +203,7 @@ header {
 
 .hero {
   height: 100vh;
+  max-height: 100vh;
   width: 100%;
   position: relative;
   background-image: url(../images/NBLOGOforweb.jpg);
@@ -253,9 +254,6 @@ header {
 }
 .nav__container .item.visible:before {
   transform: scaleX(1);
-}
-.nav__container .item.visible:before:nth-child(3) {
-  transition-delay: 9s;
 }
 .nav__container .item.visible .item__content {
   transform: translateY(0);
@@ -649,5 +647,10 @@ section a {
   }
   .section1 {
     height: auto;
+  }
+}
+@media screen and (max-width: 1000px) and (width <= 768px) {
+  .hero {
+    height: 65vh;
   }
 }/*# sourceMappingURL=style.css.map */

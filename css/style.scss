@@ -231,6 +231,7 @@ header {
 // HERO
 .hero {
   height: 100vh;
+  max-height: 100vh;
   width: 100%;
   position: relative;
   background-image: url(../images/NBLOGOforweb.jpg);
@@ -279,13 +280,11 @@ header {
       transition: transform 1.8s ease-in-out;
       transition-delay: .9s;
       // transition: transform 2.15s cubic-bezier(0, 0.72, 1, 1.02);;
+      
     }
 
     &.visible {
       &:before {
-        &:nth-child(3) {
-          transition-delay: 9s;
-        }
         transform: scaleX(1);
       }
 
@@ -771,5 +770,11 @@ grid-template-columns: 60% auto;
   }
   .section1 {
   height: auto;
+  }
+
+  @media screen and (width <= 768px) {
+    .hero {
+      height: 65vh;
+    }
   }
 }
