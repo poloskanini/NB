@@ -22,7 +22,7 @@ document.querySelectorAll('.reveal').forEach(function (r) {
 })
 
 // INTERSECTION OBSERVER VISIBLE
-const ratioBis = .1;
+const ratioBis = .6;
 
 const optionsBis = {
   root: null,
@@ -79,8 +79,8 @@ const scroll = new LocomotiveScroll({
   smooth: true,
   mobile: { // For mobile devices
     smooth: true
-},
-tablet: { // For tablet devices
+  },
+  tablet: { // For tablet devices
     smooth: true
 }
 });
