@@ -124,7 +124,7 @@ secondItem.addEventListener('click', () => {
 
 thirdItem.addEventListener('click', () => {
   scroll.scrollTo(aboutMe, {
-    duration: "500",
+    duration: "3500",
     easing: [0.25, 0.0, 0.35, 1.0],
   });
 })

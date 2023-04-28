@@ -776,5 +776,21 @@ grid-template-columns: 60% auto;
     .hero {
       height: 65vh;
     }
+
+    .grid {
+      display: flex;
+
+      .left-column {
+        width: 100%;
+  
+        .langage-item {
+          height: 20vh;
+        }
+      }
+  
+      .right-column {
+        display: none;
+      }
+    }
   }
 }

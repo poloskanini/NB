@@ -653,4 +653,16 @@ section a {
   .hero {
     height: 65vh;
   }
+  .grid {
+    display: flex;
+  }
+  .grid .left-column {
+    width: 100%;
+  }
+  .grid .left-column .langage-item {
+    height: 20vh;
+  }
+  .grid .right-column {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
