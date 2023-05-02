@@ -32,6 +32,8 @@
   <!-- Container Locomotive -->
   <!-- TODO:: Introduction avec fondu au blanc ? Ajouter à container les classes "fade-1" et "reveal" -->
   <div class="container" data-scroll-container>
+    <!-- Overlay -->
+    <!-- <div class="overlay" id="overlay"></div> -->
 
     <!-- HEADER -->
     <header>
@@ -42,9 +44,9 @@
             <img src="images/nb_black.png" alt="Logo NB black" style="width: 30px; height: auto;">
           </a>
         </div>
-        <div class="header-item header-contact">
-          <a href="mailto:nicolasbarthes.dev@gmail.com"  target="_blank"></a>
-          </div>
+        <!-- <div class="header-item header-contact">
+          <a href="mailto:nicolasbarthes.dev@gmail.com"  target="_blank">CONTACT</a>
+          </div> -->
         </div>
   
       <div class="header-down">
@@ -53,6 +55,9 @@
           <small>DÉVELOPPEUR FREELANCE</small>
         </div>
         <div class="header-item header-socials">
+          <a href="mailto:nicolasbarthes.dev@gmail.com"  target="_blank">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
           <a href="https://www.facebook.com/nicolasbarthes.dev" target="_blank">
             <i class="fa-brands fa-facebook"></i>
           </a>
@@ -68,7 +73,7 @@
     <!-- HERO -->
     <div class="hero" data-scroll-section></div>
 
-    <!-- Section -->
+    <!--* Section 1 -->
     <section class="section1" id="menu" data-scroll-section>
 
       <!-- NAV__CONTAINER -->
@@ -125,14 +130,13 @@
 
       <!-- MY PROJECTS -->
       <div class="myprojects fade- reveal">
-
+        
         <!-- Project 1 -->
         <a class="project-card custom-p fade-1 reveal" href="https://poloskanini.github.io/Dicee3D/" target="_blank" id="project-card-3" data-scroll-class="scroll-class" data-scroll data-scroll-speed="3" data-scroll-delay="1">
           <div class="overlay">
             <h2>Jeu de dés <br> <small>(JavaScript/CSS)</small></h2>
             <p>Dice Game</p>
           </div>
-          </a>
         </a>
 
         <!-- Project 2 -->
@@ -178,10 +182,18 @@
         </a>
 
         <!-- Project 6 -->
-        <a class="project-card custom-p" href="https://poloskanini.github.io/New-York-Experience/" target="_blank" id="project-card-6" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="4">
+        <!-- <a class="project-card custom-p" href="https://poloskanini.github.io/New-York-Experience/" target="_blank" id="project-card-6" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="4">
           <div class="overlay">
             <h2>Modèle de page d'accueil vidéo <br> <small>(HTML / CSS)</small></h2>
             <p>NEW-YORK EXPERIENCE</p>
+          </div>
+        </a> -->
+
+        <!-- Project 6 -->
+        <a class="project-card custom-p" href="https://lit-shore-10262.herokuapp.com/" target="_blank" id="project-card-6" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="4">
+          <div class="overlay">
+            <h2>Kit Mailing<br> <small>(PHP / SQL / CSS)</small></h2>
+            <p>Dropplist</p>
           </div>
         </a>
 
@@ -207,7 +219,7 @@
       
     </section>
 
-    <!-- Section "Mes compétences"-->
+    <!--* Section "Mes compétences"-->
     <section id="competences" data-scroll-section>
 
       <div class="my-technologies mywork fade- reveal" id="technologies">
@@ -316,8 +328,8 @@
                 <span data-scroll data-scroll-delay="0.065" data-scroll-speed="2">P</span>
                 <span data-scroll data-scroll-delay="0.055" data-scroll-speed="2">R</span>
                 <span data-scroll data-scroll-delay="0.045" data-scroll-speed="2">E</span>
-                <span data-scroll data-scroll-delay="0.045" data-scroll-speed="2">S</span>
-                <span data-scroll data-scroll-delay="0.045" data-scroll-speed="2">S</span>
+                <span data-scroll data-scroll-delay="0.035" data-scroll-speed="2">S</span>
+                <span data-scroll data-scroll-delay="0.025" data-scroll-speed="2">S</span>
               </p>
             </div>
 
@@ -335,8 +347,8 @@
 
     </section>
 
-    <!-- SECTION ABOUT ME -->
-    <section id="about-me" data-scroll-section data-scroll-direction="horizontal">
+    <!--* SECTION ABOUT ME -->
+    <section id="about-me" data-scroll-section>
 
       <div class="mywork fade- reveal my-technologies">
         <p data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">
@@ -347,12 +359,24 @@
         </p>
       </div>
 
+      <div class="about-me-content">
+        <div class="about-me-text reveal fade-1">
+          <h2>Some title</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit impedit ex earum totam quisquam minus consectetur, cum ea dolores ad, vitae laboriosam molestias aut? Sit nostrum quidem ex eos repellendus!</p>
+        </div>
+        <div class="about-me-image reveal fade-2">
+          <div class="about-me-border"></div>
+        </div>
+      </div>
+
+      <!-- <div class="about-background" id="about-background" data-scroll data-scroll-speed="-20" data-scroll-target="#about-me" data-scroll-direction="horizontal"></div> -->
+
     </section>
 
-    <!-- SECTION CONTACT -->
+    <!--* SECTION CONTACT -->
 
 
-    <!-- SECTION FOOTER -->
+    <!--* SECTION FOOTER -->
 
   </div>
 
@@ -379,6 +403,3 @@
 
 </body>
 </html>
-
-<!-- CREDITS :
-  Vidéo background "Quel est votre projet ?" de Kelly L provenant de Pexels -->

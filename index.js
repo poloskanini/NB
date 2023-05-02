@@ -45,20 +45,6 @@ document.querySelectorAll('.item').forEach(function(r) {
   observerBis.observe(r);
 })
 
-// Header change background
-
-//TODO: To be fixed
-// const headerDown = document.querySelector('.header-down');
-
-// window.addEventListener('scroll', function(event) {
-//   if (window.scrollY > 20) {
-//     console.log('Coucou');
-//     headerDown.classList.add('header-white')
-//   } else {
-//     headerDown.classList.remove('header-white')
-//   }
-// });
-
 //LOADER
 const loader = document.querySelector('.loader');
 
@@ -148,3 +134,9 @@ const headerDownObserver = new IntersectionObserver(function(entries, headerDown
 }, headerDownOptions);
 
 headerDownObserver.observe(menu);
+
+// Background image moving on scroll
+// let overlay = document.getElementById('overlay');
+// window.addEventListener("scroll", function() {
+//   overlay.style.backgroundPosition = +window.pageYOffset+"px";
+// });

@@ -107,6 +107,7 @@ html.has-scroll-dragging * {
 .container {
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 //LOADER
@@ -146,8 +147,12 @@ header {
   top: 0;
 
   .header-logo {
-    padding: 2rem;
+    margin: 1rem;
+    padding: 1rem;
     cursor: pointer;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 50%;
   }
 }
 
@@ -168,18 +173,22 @@ header {
 }
 
 .header-socials a {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin: .3rem 0;
   cursor: pointer;
   padding: 0 0.3rem;
   transition: .2s ease-out;
 
-  &:hover {
-    color: #3b5998;
+  &:hover:nth-child(1) {
+    color: #f26a39;
+  }
 
-    &:hover:nth-child(2) {
-      color: #B4D45F;
-    }
+  &:hover:nth-child(2) {
+    color: #3b5998;
+  }
+
+  &:hover:nth-child(3) {
+    color: #B4D45F;
   }
 }
 
@@ -418,15 +427,21 @@ section {
   // margin-top: 7rem;
 }
 
+.myprojects:hover .project-card {
+  opacity: 1;
+}
+
+.myprojects .project-card:hover {
+  background-image: brightness(50%);
+}
+
 /* Project Card */
 .project-card {
   width: 400px;
   height: 450px;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 1;
-  transition: .5s opacity ease-in-out;
-  opacity: .9;
+  transition: 250ms opacity ease-in-out;
   z-index: 100;
   margin: 7% 25px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
@@ -435,13 +450,21 @@ section {
               0 8px 8px rgba(0,0,0,0.15);
 }
 
-.project-card:hover {
-  filter: grayscale(90%) contrast(100%);
-}
+
+// .myprojects:hover .project-card {
+//   opacity: .1;
+// }
+
+// .myprojects .project-card:hover {
+//   opacity: 1;
+// }
+
+// .myprojects:has(.fancy:hover) .project-card:not(.fancy) {
+//   opacity: .2;
+// }
 
 #project-card-1 {
   background-image: url(../images/jesuisangeposter.jpg);
-  opacity: 1;
   background-position: center;
 }
 
@@ -476,36 +499,35 @@ section {
 
 #project-card-5 {
   background-image: url(../images/rudorposter.jpg);
-  opacity: 1;
+  background-position: center;
 }
 
 #project-card-6 {
-  background-image: url(../images/newyorkposter.jpg);
-  opacity: 1;
+  background-image: url(../images/dropplist.png);
+  background-position: center;
 }
 
 #project-card-7 {
   background-image: url(../images/kaamelottposter.jpg);
-  opacity: 1;
   background-position: center;
 }
 
 #project-card-8 {
   background-image: url(../images/SFG3.png);
-  opacity: 1;
   background-position: center;
 }
 
 //TODO: Revoir l'overlay
 //OVERLAY PROJECT-CARD
 .project-card .overlay {
-  position: absolute;
+  position: fixed;
   overflow: hidden;
-  width: 80%;
-  height: 80%;
-  left: 10%;
-  top: 10%;
-  border-bottom: 1px solid #FFF;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid #000000;
+  color: #FFF;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: scale(0,1);
@@ -515,11 +537,11 @@ section {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  z-index: 10;
 }
 
 .project-card:hover .overlay {
   opacity: 1;
-  filter: alpha(opacity=100);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -538,36 +560,20 @@ section {
   background-color: transparent;
   color: #FFF;
   padding: 1em 0;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
+  opacity: 1;
 }
 
 .project-card p {
   font-size: 1.5rem;
   font-weight: 800;
-  text-shadow: 0px 0px 1px gray;
 }
 
 .project-card a, .project-card p {
   color: #FFF;
   padding: 1em 0;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0,100%,0);
-  transform: translate3d(0,100%,0);
-  text-decoration: none;
+  opacity: 1;
 }
 
-.project-card:hover a, .project-card:hover p, .project-card :hover h2 {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
 
 // SECTION 1MY WORK
 .mywork {
@@ -736,7 +742,6 @@ grid-template-columns: 60% auto;
 
     }
   }
-  
 
   .right-column{
     img {
@@ -751,11 +756,53 @@ grid-template-columns: 60% auto;
 // SECTION ABOUT ME
 #about-me {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 
-  .horizontal-slider {
-    height: 100vh;
-    background-color: darksalmon;
+
+  .about-me-content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 50% auto;
+    margin: 4rem 0;
+
+    .about-me-text {
+      padding: 3rem;
+      margin: 0 auto;
+    }
+
+    .about-me-image {
+      background-image: url(../images/programmer.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      width: 30vw;
+      margin: 0 auto;
+      position: relative;
+
+      .about-me-border {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: -30px;
+        bottom: 0px;
+        left: 30px;
+        right: 0;
+        width: 30vw;
+        height: 400px;
+        z-index: -10;
+      }
+    }
+  }
+
+
+  #about-background {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    background-color: lightpink;
+    top: 30%;
+    left: 50%;
+    transform: translate(-30%, -50%);
   }
 }
 
