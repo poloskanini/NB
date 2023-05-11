@@ -741,7 +741,7 @@ section a {
     height: auto;
   }
 }
-@media screen and (max-width: 1000px) and (width <= 768px) {
+@media screen and (max-width: 1000px) and (max-width: 768px) {
   .item__content {
     padding: 0;
   }
