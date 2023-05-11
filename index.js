@@ -58,10 +58,16 @@ const scroll = new LocomotiveScroll({
   el: document.querySelector('[data-scroll-container]'),
   smooth: true,
   mobile: { // For mobile devices
-    smooth: true
+    smooth: true,
+    breakpoint: 0,
+    inertia: 0.8,
+    getDirection: true,
   },
   tablet: { // For tablet devices
-    smooth: true
+    smooth: true,
+    breakpoint: 0,
+    inertia: 0.8,
+    getDirection: true,
 }
 });
 
