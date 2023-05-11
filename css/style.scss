@@ -158,6 +158,7 @@ header {
 
 .header-up {
   top: 0;
+  mix-blend-mode: exclusion;
 
   .header-logo {
     margin: 1rem;
@@ -227,11 +228,6 @@ header {
   // writing-mode: vertical-rl;
   transform: rotate(90deg);
   text-orientation: upright;
-  
-
-  // a:hover {
-  //   animation: flash .3s alternate infinite;
-  // }
 }
 
 // @keyframes flash {
@@ -849,9 +845,13 @@ grid-template-columns: 60% auto;
 
   .contact-content {
     display: grid;
-    grid-template-columns: 50% auto;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    align-items: center;
+
+    .contact-left,
+    .contact-right {
+      margin: 0 auto;
+    }
 
     .contact-email,
     .contact-socials {
@@ -899,17 +899,14 @@ grid-template-columns: 60% auto;
 @media screen and (max-width: 1000px) {
 
   .project-card {
-    width: 300px;
-    height: 250px;
+    width: 100px;
+    height: 100px;
   }
   .section1 {
   height: auto;
   }
 
   @media screen and (width <= 768px) {
-    .hero {
-      height: 65vh;
-    }
 
     .item__content {
       padding: 0;
@@ -934,7 +931,7 @@ grid-template-columns: 60% auto;
     #about-me {
       .about-me-content {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
 
         .about-me-image {
           width: 100%;
@@ -948,8 +945,18 @@ grid-template-columns: 60% auto;
 
     #contact {
       .contact-content {
-        display: flex;
-        flex-direction: column;
+        display: block;
+
+        .contact-email,
+        .contact-socials {
+          flex-direction: column;
+          margin: 1rem 0;
+        }
+
+        .contact-email h3,
+        .contact-socials-title {
+          text-align: center;
+        }
       }
     }
   }
