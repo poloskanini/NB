@@ -167,6 +167,7 @@ header {
     border: 1px solid white;
     background-color: white;
     border-radius: 50%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   }
 }
 
@@ -815,7 +816,7 @@ grid-template-columns: 60% auto;
     }
 
     .about-me-image {
-      background-image: url(../images/programmer.jpg);
+      background-image: url(../images/nico.JPG);
       background-size: cover;
       background-position: center;
       height: 400px;
