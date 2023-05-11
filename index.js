@@ -79,12 +79,14 @@ const burgerMenu = document.getElementById('burgerMenu');
 const firstItem = document.getElementById('firstItem');
 const secondItem = document.getElementById('secondItem');
 const thirdItem = document.getElementById('thirdItem');
+const fourthItem = document.getElementById('fourthItem');
 
 // My targets
 const menu = document.getElementById('menu');
 const projects__target = document.getElementById('projects__target'); // 
 const competences = document.getElementById('competences');
 const aboutMe = document.getElementById('about-me');
+const contact = document.getElementById('contact');
 
 burgerMenu.addEventListener('click', () => {
   scroll.scrollTo(menu, {
@@ -110,6 +112,13 @@ secondItem.addEventListener('click', () => {
 
 thirdItem.addEventListener('click', () => {
   scroll.scrollTo(aboutMe, {
+    duration: "3500",
+    easing: [0.25, 0.0, 0.35, 1.0],
+  });
+})
+
+fourthItem.addEventListener('click', () => {
+  scroll.scrollTo(contact, {
     duration: "3500",
     easing: [0.25, 0.0, 0.35, 1.0],
   });

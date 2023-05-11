@@ -54,7 +54,7 @@ $red: #C92D1F;
 }
 
 .fade-2 {
-  transition-delay: 1s;
+  transition-delay: .5s;
 }
 
 .fade-3 {
@@ -102,6 +102,11 @@ html.has-scroll-dragging * {
 
 .has-scroll-smooth body {
   overflow: hidden;
+}
+
+hr {
+  width: 50%;
+  margin: 3rem auto;
 }
 
 .container {
@@ -173,7 +178,7 @@ header {
 }
 
 .header-socials a {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: .3rem 0;
   cursor: pointer;
   padding: 0 0.3rem;
@@ -210,26 +215,27 @@ header {
   }
 }
 
-.header-contact {
-  writing-mode: vertical-rl;
+.header-year {
+  // writing-mode: vertical-rl;
+  transform: rotate(90deg);
   text-orientation: upright;
-  padding: 1rem;
+  
 
-  a:hover {
-    animation: flash .3s alternate infinite;
-  }
+  // a:hover {
+  //   animation: flash .3s alternate infinite;
+  // }
 }
 
-@keyframes flash {
-  0% {
-    color: #fff900;
-    text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
-  }
-  90% {
-    color: #484848;
-    text-shadow: none;
-  }
-}
+// @keyframes flash {
+//   0% {
+//     color: #fff900;
+//     text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+//   }
+//   90% {
+//     color: #484848;
+//     text-shadow: none;
+//   }
+// }
 
 .header-white {
   background: white;
@@ -380,7 +386,7 @@ header {
 
         span {
           font-weight: 100;
-          font-size: 2vw;
+          font-size: 1vw;
           text-transform: uppercase;
           letter-spacing: .020vw;
         }
@@ -403,11 +409,10 @@ section {
   }
 
   p {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   a {
-    color: white;
     font-weight: bold;
   }
 }
@@ -526,8 +531,11 @@ section {
   height: 100%;
   left: 0;
   top: 0;
+  padding: 2rem;
   border-bottom: 1px solid #000000;
   color: #FFF;
+  background-color: rgba($color: #000000, $alpha: .6);
+  background-blend-mode: hard-light;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: scale(0,1);
@@ -769,6 +777,37 @@ grid-template-columns: 60% auto;
     .about-me-text {
       padding: 3rem;
       margin: 0 auto;
+      font-family: 'Cormorant Garamond', sans-serif;
+
+      .about-me-intro {
+        margin-bottom: 2rem;
+
+        h3 {
+          font-size: clamp(20px, 7vw, 70px);
+          font-weight: 500;
+          // transform: translate3d(0, 100%, 0);
+          // transition: transform 2000ms cubic-bezier(0.19, 1, 0.22, 1) 0ms;
+        }
+
+        // h3.reveal-visible {
+        //   transform: translate3d(0, 0, 0);
+        // }
+  
+        h4 {
+          font-size: clamp(15px, 6vw, 55px);
+          font-weight: 100;
+          font-style: italic;
+        }
+      }
+
+      .about-me-paragraphs {
+        line-height: 1.4;
+
+        h4 {
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
     }
 
     .about-me-image {
@@ -793,20 +832,60 @@ grid-template-columns: 60% auto;
       }
     }
   }
-
-
-  #about-background {
-    position: absolute;
-    width: 100%;
-    height: 30vh;
-    background-color: lightpink;
-    top: 30%;
-    left: 50%;
-    transform: translate(-30%, -50%);
-  }
 }
 
+// CONTACT
+#contact {
+  min-height: 50vh;
+  font-family: 'Cormorant Garamond', sans-serif;
 
+  .contact-content {
+    display: grid;
+    grid-template-columns: 50% auto;
+    justify-content: center;
+    align-items: center;
+
+    .contact-email,
+    .contact-socials {
+      display: flex;
+    }
+
+    .contact-link {
+      padding-left: 2rem;
+
+      a {
+        text-decoration: none;
+        color: #606887;
+        font-size: 1.25rem;
+        position: relative;
+      }
+
+      a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        border-radius: 4px;
+        background-color: #606887;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+      }
+      
+      a:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+
+    .socials-link {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
 
 // MEDIA QUERIES MOBILE
 @media screen and (max-width: 1000px) {
@@ -824,6 +903,10 @@ grid-template-columns: 60% auto;
       height: 65vh;
     }
 
+    .item__content {
+      padding: 0;
+    }
+
     .grid {
       display: flex;
 
@@ -837,6 +920,28 @@ grid-template-columns: 60% auto;
   
       .right-column {
         display: none;
+      }
+    }
+    
+    #about-me {
+      .about-me-content {
+        display: flex;
+        flex-direction: column;
+
+        .about-me-image {
+          width: 100%;
+  
+          .about-me-border {
+            display: none;
+          }
+        }
+      }
+    }
+
+    #contact {
+      .contact-content {
+        display: flex;
+        flex-direction: column;
       }
     }
   }

@@ -43,7 +43,7 @@
 }
 
 .fade-2 {
-  transition-delay: 1s;
+  transition-delay: 0.5s;
 }
 
 .fade-3 {
@@ -86,6 +86,11 @@ html.has-scroll-dragging * {
 
 .has-scroll-smooth body {
   overflow: hidden;
+}
+
+hr {
+  width: 50%;
+  margin: 3rem auto;
 }
 
 .container {
@@ -153,7 +158,7 @@ header {
 }
 
 .header-socials a {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0.3rem 0;
   cursor: pointer;
   padding: 0 0.3rem;
@@ -186,25 +191,11 @@ header {
   font-weight: 900;
 }
 
-.header-contact {
-  writing-mode: vertical-rl;
+.header-year {
+  transform: rotate(90deg);
   text-orientation: upright;
-  padding: 1rem;
-}
-.header-contact a:hover {
-  animation: flash 0.3s alternate infinite;
 }
 
-@keyframes flash {
-  0% {
-    color: #fff900;
-    text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
-  }
-  90% {
-    color: #484848;
-    text-shadow: none;
-  }
-}
 .header-white {
   background: white;
 }
@@ -331,7 +322,7 @@ header {
 }
 .nav__container .item .item__content .item__metas span {
   font-weight: 100;
-  font-size: 2vw;
+  font-size: 1vw;
   text-transform: uppercase;
   letter-spacing: 0.02vw;
 }
@@ -345,10 +336,9 @@ section h1 {
   font-size: 3em;
 }
 section p {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 section a {
-  color: white;
   font-weight: bold;
 }
 
@@ -431,8 +421,11 @@ section a {
   height: 100%;
   left: 0;
   top: 0;
+  padding: 2rem;
   border-bottom: 1px solid #000000;
   color: #FFF;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: hard-light;
   transition: opacity 0.35s, transform 0.35s;
   transform: scale(0, 1);
   display: flex;
@@ -640,6 +633,26 @@ section a {
 #about-me .about-me-content .about-me-text {
   padding: 3rem;
   margin: 0 auto;
+  font-family: "Cormorant Garamond", sans-serif;
+}
+#about-me .about-me-content .about-me-text .about-me-intro {
+  margin-bottom: 2rem;
+}
+#about-me .about-me-content .about-me-text .about-me-intro h3 {
+  font-size: clamp(20px, 7vw, 70px);
+  font-weight: 500;
+}
+#about-me .about-me-content .about-me-text .about-me-intro h4 {
+  font-size: clamp(15px, 6vw, 55px);
+  font-weight: 100;
+  font-style: italic;
+}
+#about-me .about-me-content .about-me-text .about-me-paragraphs {
+  line-height: 1.4;
+}
+#about-me .about-me-content .about-me-text .about-me-paragraphs h4 {
+  font-weight: bold;
+  text-decoration: underline;
 }
 #about-me .about-me-content .about-me-image {
   background-image: url(../images/programmer.jpg);
@@ -661,14 +674,50 @@ section a {
   height: 400px;
   z-index: -10;
 }
-#about-me #about-background {
+
+#contact {
+  min-height: 50vh;
+  font-family: "Cormorant Garamond", sans-serif;
+}
+#contact .contact-content {
+  display: grid;
+  grid-template-columns: 50% auto;
+  justify-content: center;
+  align-items: center;
+}
+#contact .contact-content .contact-email,
+#contact .contact-content .contact-socials {
+  display: flex;
+}
+#contact .contact-content .contact-link {
+  padding-left: 2rem;
+}
+#contact .contact-content .contact-link a {
+  text-decoration: none;
+  color: #606887;
+  font-size: 1.25rem;
+  position: relative;
+}
+#contact .contact-content .contact-link a::before {
+  content: "";
   position: absolute;
   width: 100%;
-  height: 30vh;
-  background-color: lightpink;
-  top: 30%;
-  left: 50%;
-  transform: translate(-30%, -50%);
+  height: 1px;
+  border-radius: 4px;
+  background-color: #606887;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+#contact .contact-content .contact-link a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+#contact .contact-content .socials-link {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 1000px) {
@@ -684,6 +733,9 @@ section a {
   .hero {
     height: 65vh;
   }
+  .item__content {
+    padding: 0;
+  }
   .grid {
     display: flex;
   }
@@ -695,5 +747,19 @@ section a {
   }
   .grid .right-column {
     display: none;
+  }
+  #about-me .about-me-content {
+    display: flex;
+    flex-direction: column;
+  }
+  #about-me .about-me-content .about-me-image {
+    width: 100%;
+  }
+  #about-me .about-me-content .about-me-image .about-me-border {
+    display: none;
+  }
+  #contact .contact-content {
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
