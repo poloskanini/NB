@@ -54,7 +54,7 @@ $red: #C92D1F;
 }
 
 .fade-2 {
-  transition-delay: .5s;
+  transition-delay: .4s;
 }
 
 .fade-3 {
@@ -129,6 +129,7 @@ hr {
 .loaded {
   transform: translateY(-100%);
   transition: .7s cubic-bezier(.88,.06,.83,.67);
+  transition-delay: .4s;
 }
 
 .fondu-out {
@@ -153,7 +154,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .header-up {
@@ -231,22 +232,9 @@ header {
   text-orientation: upright;
 }
 
-// @keyframes flash {
-//   0% {
-//     color: #fff900;
-//     text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
-//   }
-//   90% {
-//     color: #484848;
-//     text-shadow: none;
-//   }
-// }
-
 .header-white {
   background: white;
 }
-
-// HEADER HOVER EFFECT
 
 // HERO
 .hero {
@@ -269,7 +257,6 @@ header {
   width: 100%;
   margin: 0 auto;
   list-style-type: none;
-  font-family: 'Crimson Text', serif;
   font-family: 'Cormorant Garamond', sans-serif;
 
   h2 {
@@ -659,7 +646,6 @@ section {
 }
 
 // SECTION COMPETENCES
-
 #competences {
   font-family: 'Cormorant Garamond';
 }
@@ -770,7 +756,6 @@ grid-template-columns: 60% auto;
 #about-me {
   width: 100%;
   min-height: 100vh;
-
 
   .about-me-content {
     display: grid;

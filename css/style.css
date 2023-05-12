@@ -43,7 +43,7 @@
 }
 
 .fade-2 {
-  transition-delay: 0.5s;
+  transition-delay: 0.4s;
 }
 
 .fade-3 {
@@ -112,6 +112,7 @@ hr {
 .loaded {
   transform: translateY(-100%);
   transition: 0.7s cubic-bezier(0.88, 0.06, 0.83, 0.67);
+  transition-delay: 0.4s;
 }
 
 .fondu-out {
@@ -135,7 +136,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .header-up {
@@ -229,7 +230,6 @@ header {
   width: 100%;
   margin: 0 auto;
   list-style-type: none;
-  font-family: "Crimson Text", serif;
   font-family: "Cormorant Garamond", sans-serif;
 }
 .nav__container h2 {
