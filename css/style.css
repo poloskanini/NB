@@ -657,7 +657,7 @@ section a {
   font-weight: 500;
 }
 #about-me .about-me-content .about-me-text .about-me-intro h4 {
-  font-size: clamp(15px, 4vw, 45px);
+  font-size: clamp(15px, 5vw, 55px);
   font-weight: 100;
   font-style: italic;
 }
@@ -765,6 +765,9 @@ section a {
   #about-me .about-me-content {
     display: flex;
     flex-direction: column-reverse;
+  }
+  #about-me .about-me-content .about-me-image {
+    width: 100%;
   }
   #about-me .about-me-content .about-me-border {
     display: none;
