@@ -43,7 +43,7 @@
 }
 
 .fade-2 {
-  transition-delay: 0.4s;
+  transition-delay: 0.5s;
 }
 
 .fade-3 {
@@ -150,7 +150,6 @@ header {
   border: 1px solid white;
   background-color: white;
   border-radius: 50%;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .header-down {
@@ -424,6 +423,11 @@ section a {
   background-position: center;
 }
 
+#project-card-9 {
+  background-image: url(../images/smartphone_mockup2.png);
+  background-position: center;
+}
+
 .project-card .overlay {
   position: fixed;
   overflow: hidden;
@@ -653,7 +657,7 @@ section a {
   font-weight: 500;
 }
 #about-me .about-me-content .about-me-text .about-me-intro h4 {
-  font-size: clamp(15px, 6vw, 55px);
+  font-size: clamp(15px, 4vw, 45px);
   font-weight: 100;
   font-style: italic;
 }
@@ -665,7 +669,7 @@ section a {
   text-decoration: underline;
 }
 #about-me .about-me-content .about-me-image {
-  background-image: url(../images/nico.JPG);
+  background-image: url(../images/nico2.JPG);
   background-size: cover;
   background-position: center;
   height: 400px;
