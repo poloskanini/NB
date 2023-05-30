@@ -766,10 +766,7 @@ section a {
     display: flex;
     flex-direction: column-reverse;
   }
-  #about-me .about-me-content .about-me-image {
-    width: 100%;
-  }
-  #about-me .about-me-content .about-me-image .about-me-border {
+  #about-me .about-me-content .about-me-border {
     display: none;
   }
   #contact .contact-content {

@@ -924,13 +924,9 @@ grid-template-columns: 60% auto;
         display: flex;
         flex-direction: column-reverse;
 
-        .about-me-image {
-          width: 100%;
-  
           .about-me-border {
             display: none;
           }
-        }
       }
     }
 
