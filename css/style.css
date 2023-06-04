@@ -449,11 +449,6 @@ section a {
   z-index: 10;
 }
 
-.project-card:hover .overlay {
-  opacity: 1;
-  transform: scale(1);
-}
-
 .project-card img {
   display: block;
   position: relative;
@@ -485,6 +480,9 @@ section a {
   text-align: center;
   top: 90%;
   width: 100%;
+  position: relative;
+  z-index: 100;
+  mix-blend-mode: overlay;
 }
 .mywork p {
   font-size: clamp(25px, 10vw, 75px);
@@ -656,7 +654,7 @@ section a {
   font-weight: 500;
 }
 #about-me .about-me-content .about-me-text .about-me-intro h4 {
-  font-size: clamp(15px, 5vw, 55px);
+  font-size: clamp(1.2rem, 5vw, 45px);
   font-weight: 100;
   font-style: italic;
 }
@@ -738,8 +736,8 @@ section a {
 
 @media screen and (max-width: 1000px) {
   .project-card {
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
   }
   .section1 {
     height: auto;
@@ -782,5 +780,11 @@ section a {
   #contact .contact-content .contact-email h3,
   #contact .contact-content .contact-socials-title {
     text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project-card:hover .overlay {
+    opacity: 1;
+    transform: scale(1);
   }
 }/*# sourceMappingURL=style.css.map */

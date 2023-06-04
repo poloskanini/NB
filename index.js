@@ -92,6 +92,7 @@ burgerMenu.addEventListener('click', () => {
   scroll.scrollTo(menu, {
     duration: "500",
     easing: [0.25, 0.0, 0.35, 1.0],
+    offset: -100
   });
 })
 
