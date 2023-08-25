@@ -219,8 +219,19 @@ header {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  animation: blurOpening 2s;
 }
 
+@keyframes blurOpening {
+  from {
+    filter: blur(20px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
 #marginMenu {
   margin-top: 5rem;
 }
@@ -689,6 +700,7 @@ section a {
 #contact {
   min-height: 50vh;
   font-family: "Cormorant Garamond", sans-serif;
+  margin-bottom: 3rem;
 }
 #contact .contact-content {
   display: grid;

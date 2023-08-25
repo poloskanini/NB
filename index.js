@@ -100,7 +100,7 @@ firstItem.addEventListener('click', () => {
   scroll.scrollTo(projects__target, {
     duration: "1000",
     easing: [0.25, 0.0, 0.35, 1.0],
-
+    offset: -100
   });
 })
 
@@ -108,6 +108,7 @@ secondItem.addEventListener('click', () => {
   scroll.scrollTo(competences, {
     duration: "1000",
     easing: [0.25, 0.0, 0.35, 1.0],
+    offset: -100
   });
 })
 
@@ -115,6 +116,7 @@ thirdItem.addEventListener('click', () => {
   scroll.scrollTo(aboutMe, {
     duration: "3500",
     easing: [0.25, 0.0, 0.35, 1.0],
+    offset: -100
   });
 })
 
@@ -122,6 +124,7 @@ fourthItem.addEventListener('click', () => {
   scroll.scrollTo(contact, {
     duration: "3500",
     easing: [0.25, 0.0, 0.35, 1.0],
+    offset: -100
   });
 })
 
@@ -150,3 +153,4 @@ headerDownObserver.observe(menu);
 // window.addEventListener("scroll", function() {
 //   overlay.style.backgroundPosition = +window.pageYOffset+"px";
 // });
+
