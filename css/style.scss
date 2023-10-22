@@ -739,19 +739,25 @@ grid-template-columns: 60% auto;
       }
 
       &:nth-child(7) {
+        background: rgb(0,0,0);
+        background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(25,125,143,1) 100%);
+      }
+
+      &:nth-child(8) {
         background: rgb(36,81,93);
         background: radial-gradient(circle, rgba(36,81,93,1) 0%, rgba(90,122,130,1) 100%);
       }
 
-      &:nth-child(8) {
+      &:nth-child(9) {
         background: rgb(254,101,87);
         background: radial-gradient(circle, rgba(254,101,87,1) 0%, rgba(251,173,63,1) 100%);
       }
 
-      &:nth-child(9) {
+      &:nth-child(10) {
         background: rgb(231,174,226);
         background: radial-gradient(circle, rgba(231,174,226,1) 0%, rgba(152,103,193,1) 100%);
       }
+      
 
     }
   }
@@ -948,7 +954,8 @@ grid-template-columns: 60% auto;
 
     #contact {
       .contact-content {
-        display: block;
+        display: flex;
+        flex-direction: column;
 
         .contact-email,
         .contact-socials {
