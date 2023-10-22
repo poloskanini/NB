@@ -190,9 +190,10 @@ header {
 .header-socials a {
   font-size: 1.2rem;
   margin: .3rem 0;
-  cursor: pointer;
-  padding: 0 0.3rem;
+  padding: .5rem;
   transition: .2s ease-out;
+  cursor: pointer;
+
 
   &:hover:nth-child(1) {
     color: #f26a39;
@@ -205,7 +206,13 @@ header {
   &:hover:nth-child(3) {
     color: #B4D45F;
   }
+
+  &:hover:nth-child(4) {
+    color: #5f8ad4;
+  }
+
 }
+
 
 .header-logo img {
   width: clamp(2rem, 3vw, 10rem);
