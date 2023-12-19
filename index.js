@@ -154,3 +154,23 @@ headerDownObserver.observe(menu);
 //   overlay.style.backgroundPosition = +window.pageYOffset+"px";
 // });
 
+// const Coffee = {
+//   refill()
+// }
+
+
+// let coffee = new Coffee();
+
+// const codingTime = () => {
+//   if(coffee.empty) {
+//     coffee.refill();
+//     coffee.drink();
+//   }
+
+//   coffee.drink();
+// }
+
+// codingTime();
+
+
+
