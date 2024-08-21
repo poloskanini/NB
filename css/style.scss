@@ -155,6 +155,10 @@ header {
   justify-content: space-between;
   align-items: center;
   font-size: 1.15rem;
+
+  .available {
+    font-size: .9rem;
+  }
 }
 
 .header-up {
@@ -518,7 +522,7 @@ section {
 }
 
 #project-card-6 {
-  background-image: url(../images/dropplist.png);
+  background-image: url(../images/calculir.png);
   background-position: center;
 }
 
@@ -534,6 +538,11 @@ section {
 
 #project-card-9 {
   background-image: url(../images/smartphone_mockup2.png);
+  background-position: center;
+}
+
+#project-card-10 {
+  background-image: url(../images/calculpv.png);
   background-position: center;
 }
 

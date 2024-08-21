@@ -172,5 +172,20 @@ headerDownObserver.observe(menu);
 
 // codingTime();
 
+// Créer une nouvelle date correspondant au mois actuel
+const currentDate = new Date();
+
+// Ajouter un mois à la date actuelle
+currentDate.setMonth(currentDate.getMonth() + 1);
+
+// Obtenir le mois en format abrégé
+const optionsDate = { month: 'short' };
+const nextMonth = currentDate.toLocaleString('en-US', optionsDate).toUpperCase();
+
+// Sélectionner l'élément DOM où vous voulez afficher le mois
+const monthDisplayElement = document.getElementById('month-display');
+
+// Injecter la valeur du mois dans l'élément DOM
+monthDisplayElement.textContent = nextMonth;
 
 
