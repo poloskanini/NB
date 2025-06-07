@@ -55,16 +55,25 @@
           <small>FULLSTACK DEVELOPER</small>
 
           <span>
-            <small class="available">
-              AVAILABLE
-            </small>
-            <small id="month-display" class="available">
-               <!-- <script>document.write(new Date().getMonth())</script> -->
-            </small>
-            <small class="available">
-              2024
-            </small>
+            <small class="available">AVAILABLE</small>
+            <small id="month-display" class="available"></small>
+            <small class="available" id="year-display"></small>
           </span>
+          
+          <script>
+            const monthNames = [
+              "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+              "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
+            ];
+          
+            const now = new Date();
+            const nextMonth = (now.getMonth() + 1) % 12;
+            const year = now.getFullYear() + (nextMonth === 0 ? 1 : 0);
+          
+            document.getElementById("month-display").textContent = monthNames[nextMonth];
+            document.getElementById("year-display").textContent = year;
+          </script>
+          
           
         </div>
         <div class="header-item header-socials">
