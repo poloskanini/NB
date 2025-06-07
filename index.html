@@ -61,18 +61,21 @@
           </span>
           
           <script>
-            const monthNames = [
-              "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
-              "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
-            ];
+            document.addEventListener("DOMContentLoaded", () => {
+              const monthNames = [
+                "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+                "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
+              ];
           
-            const now = new Date();
-            const nextMonth = (now.getMonth() + 1) % 12;
-            const year = now.getFullYear() + (nextMonth === 0 ? 1 : 0);
+              const now = new Date();
+              const currentMonth = now.getMonth(); // pas de +1 ici
+              const year = now.getFullYear();
           
-            document.getElementById("month-display").textContent = monthNames[nextMonth];
-            document.getElementById("year-display").textContent = year;
+              document.getElementById("month-display").textContent = monthNames[currentMonth];
+              document.getElementById("year-display").textContent = year;
+            });
           </script>
+          
           
           
         </div>
