@@ -447,6 +447,16 @@ section a {
 }
 
 #project-card-10 {
+  background-image: url(../images/hexagone.png);
+  background-position: center;
+}
+
+#project-card-11 {
+  background-image: url(../images/menezes.png);
+  background-position: center;
+}
+
+#project-card-12 {
   background-image: url(../images/calculpv.png);
   background-position: center;
 }

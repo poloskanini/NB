@@ -68,7 +68,7 @@
               ];
           
               const now = new Date();
-              const currentMonth = now.getMonth(); // pas de +1 ici
+              const currentMonth = now.getMonth() + 1; // pas de +1 ici
               const year = now.getFullYear();
           
               document.getElementById("month-display").textContent = monthNames[currentMonth];
@@ -157,6 +157,22 @@
 
       <!-- MY PROJECTS -->
       <div class="myprojects fade- reveal">
+
+        <!-- Project 10 -->
+        <a class="project-card custom-p fade-3 reveal" href="https://www.hexagone-tours.com" target="_blank" id="project-card-10" data-scroll-class="scroll-class" data-scroll data-scroll-speed="4">
+          <div class="overlay">
+            <h2>Site d'Agence de Voyages<br> <small>(Next.js/Tailwind/Framer Motion/Lenis)</small></h2>
+            <p>Hexagone Tours</p>
+          </div>
+        </a>
+
+        <!-- Project 11 -->
+        <a class="project-card custom-p fade-" id="project-card-11" data-scroll-class="scroll-class" data-scroll data-scroll-repeat data-scroll data-scroll-speed="5" href="blog-strapi1-0-front.vercel.app" target="_blank" class="project-card-link">
+          <div class="overlay">
+           <h2>Site de Cabinet d'avocats <small>(Next.js/Tailwind/Framer Motion/Strapi)</small></h2>
+            <p>Menezes Avocat</p>
+          </div>
+        </a>
         
         <!-- Project 1 -->
         <a class="project-card custom-p fade-1 reveal" href="https://poloskanini.github.io/Dicee3D/" target="_blank" id="project-card-3" data-scroll-class="scroll-class" data-scroll data-scroll-speed="3" data-scroll-delay="1">
@@ -165,6 +181,49 @@
             <p>Dice Game</p>
           </div>
         </a>
+
+         <!-- Project 6 -->
+        <a class="project-card custom-p" href="https://www.calculir.com" target="_blank" id="project-card-6" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="4">
+          <div class="overlay">
+            <h2>Calculateur d'Indemnités Repas PNC<br> <small>(Next.js)</small></h2>
+            <p>CALCUL'I.R</p>
+          </div>
+        </a>
+
+        <!-- Project 9 -->
+        <a class="project-card custom-p" href="https://www.calculpv.com" target="_blank" id="project-card-12" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="5">
+          <div class="overlay">
+            <h2>Calculateur de Primes de Vol PNC<br> <small>(Next.js)</small></h2>
+            <p>CALCUL'P.V</p>
+          </div>
+        </a>
+
+          <!-- My Work -->
+        <div class="mywork fade- reveal">
+          <p id="mywork-first" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">Quelques uns de mes projets...</p>
+      
+          <p id="mywork-second" class="quote" data-scroll 
+          data-scroll-direction="horizontal" 
+          data-scroll-speed="-1"><i>— découvrez les.</i>
+          </p>
+        </div>
+
+         <!-- Project 9 -->
+         <a class="project-card custom-p" href="https://apps.apple.com/fr/app/sngaf-pnc/id1475351310" target="_blank" id="project-card-9" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="4">
+          <div class="overlay">
+            <h2>Application Mobile SNGAF<br> <small>(Swift)</small></h2>
+            <p>Syndicat des Navigants du Groupe Air France</p>
+          </div>
+        </a>
+
+           <!-- Project 4 -->
+        <a class="project-card custom-p fade-" id="project-card-4" data-scroll-class="scroll-class" data-scroll data-scroll-repeat data-scroll data-scroll-speed="3" href="https://www.sngaf.com" target="_blank" class="project-card-link">
+          <div class="overlay">
+           <h2>Site Web du SNGAF<br> <small>(Next.js / Laravel)</small></h2>
+            <p>Syndicat des Navigants du Groupe Air France</p>
+          </div>
+        </a>
+
 
         <!-- Project 2 -->
         <a class="project-card custom-p fade-2 reveal" href="https://poloskanini.github.io/Red-Hair-Lovers/" target="_blank" id="project-card-2"    data-scroll-class="scroll-class" data-scroll data-scroll-speed="1">
@@ -182,40 +241,6 @@
           </div>
         </a>
 
-        <!-- My Work -->
-        <div class="mywork fade- reveal">
-          <p id="mywork-first" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">Quelques uns de mes projets...</p>
-      
-          <p id="mywork-second" class="quote" data-scroll 
-          data-scroll-direction="horizontal" 
-          data-scroll-speed="-1"><i>— découvrez les.</i>
-          </p>
-        </div>
-
-        <!-- Project 4 -->
-        <a class="project-card custom-p fade-" id="project-card-4" data-scroll-class="scroll-class" data-scroll data-scroll-repeat data-scroll data-scroll-speed="3" href="https://www.sngaf.com" target="_blank" class="project-card-link">
-          <div class="overlay">
-           <h2>Site Web du SNGAF<br> <small>(Next.js / Laravel)</small></h2>
-            <p>Syndicat des Navigants du Groupe Air France</p>
-          </div>
-        </a>
-
-         <!-- Project 9 -->
-         <a class="project-card custom-p" href="https://apps.apple.com/fr/app/sngaf-pnc/id1475351310" target="_blank" id="project-card-9" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="4">
-          <div class="overlay">
-            <h2>Application Mobile SNGAF<br> <small>(Swift)</small></h2>
-            <p>Syndicat des Navigants du Groupe Air France</p>
-          </div>
-        </a>
-
-        <!-- Project 5 -->
-        <a class="project-card custom-p" href="https://poloskanini.github.io/EVAL_STUDI_1/" target="_blank" id="project-card-5" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="6">
-          <div class="overlay">
-            <h2>Site vitrine associatif <br> <small>(HTML / Bootstrap)</small></h2>
-            <p>ASSOCIATION DU RU D'OR</p>
-          </div>
-        </a>
-
         <!-- Project 6 -->
         <!-- <a class="project-card custom-p" href="https://poloskanini.github.io/New-York-Experience/" target="_blank" id="project-card-6" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="4">
           <div class="overlay">
@@ -223,22 +248,6 @@
             <p>NEW-YORK EXPERIENCE</p>
           </div>
         </a> -->
-
-        <!-- Project 6 -->
-        <a class="project-card custom-p" href="https://www.calculir.com" target="_blank" id="project-card-6" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="4">
-          <div class="overlay">
-            <h2>Calculateur d'Indemnités Repas PNC<br> <small>(Next.js)</small></h2>
-            <p>CALCUL'I.R</p>
-          </div>
-        </a>
-
-        <!-- Project 9 -->
-        <a class="project-card custom-p" href="https://www.calculpv.com" target="_blank" id="project-card-10" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="5">
-          <div class="overlay">
-            <h2>Calculateur de Primes de Vol PNC<br> <small>(Next.js)</small></h2>
-            <p>CALCUL'P.V</p>
-          </div>
-        </a>
 
         <!-- Project 7 -->
         <a class="project-card custom-p" href="https://poloskanini.github.io/kaamelott-memory/" target="_blank" id="project-card-7" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="3">
@@ -257,6 +266,14 @@
           </div>
           </a>
         </a>
+
+        <!-- Project 5 -->
+        <!-- <a class="project-card custom-p" href="https://poloskanini.github.io/EVAL_STUDI_1/" target="_blank" id="project-card-5" data-scroll-class="scroll-class" data-scroll  data-scroll-speed="6">
+          <div class="overlay">
+            <h2>Site vitrine associatif <br> <small>(HTML / Bootstrap)</small></h2>
+            <p>ASSOCIATION DU RU D'OR</p>
+          </div>
+        </a> -->
 
       </div>
       
